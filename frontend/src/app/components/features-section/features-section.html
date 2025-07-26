@@ -1,0 +1,68 @@
+<section id="features" class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+      >
+        {{ "features.title" | translate }}
+      </h2>
+      <p class="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+        {{ "features.subtitle" | translate }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @for (feature of features; track feature.title) {
+      <div
+        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
+        <div
+          class="w-16 h-16 {{
+            getColorClasses(feature.color).background
+          }} rounded-full flex items-center justify-center mb-6"
+        >
+          <svg
+            class="w-8 h-8 {{ getColorClasses(feature.color).text }}"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              [attr.d]="feature.icon"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          {{ feature.title | translate }}
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          {{ feature.description | translate }}
+        </p>
+        <ul class="space-y-2">
+          @for (item of feature.features; track item) {
+          <li
+            class="flex items-center text-sm text-gray-700 dark:text-gray-300"
+          >
+            <svg
+              class="w-4 h-4 text-green-500 mr-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            {{ item | translate }}
+          </li>
+          }
+        </ul>
+      </div>
+      }
+    </div>
+  </div>
+</section>
