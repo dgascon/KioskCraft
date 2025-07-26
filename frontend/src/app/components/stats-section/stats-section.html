@@ -1,10 +1,138 @@
-<section class="py-20 bg-blue-600 text-white">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-      @for (stat of stats; track stat.value) {
-      <div>
-        <div class="text-5xl font-bold mb-2">{{ stat.value }}</div>
-        <div class="text-lg opacity-90">{{ stat.label }}</div>
+<section
+  class="py-20 bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 text-white relative overflow-hidden"
+>
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-10 left-10 animate-float opacity-10">
+      <div class="w-32 h-32 rounded-full bg-white animate-pulse-soft"></div>
+    </div>
+    <div
+      class="absolute bottom-10 right-10 animate-float animate-delay-300 opacity-10"
+    >
+      <div class="w-24 h-24 rounded-full bg-white animate-pulse-soft"></div>
+    </div>
+
+    <div class="absolute inset-0 opacity-5">
+      <svg
+        class="w-full h-full"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id="stats-grid"
+            width="10"
+            height="10"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 10 0 L 0 0 0 10"
+              fill="none"
+              stroke="white"
+              stroke-width="0.3"
+            />
+          </pattern>
+        </defs>
+        <rect width="100" height="100" fill="url(#stats-grid)" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 relative">
+    <div class="text-center mb-12 animate-fade-in-up">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        {{ "stats.title" | translate }}
+      </h2>
+      <p class="text-xl opacity-90">{{ "stats.subtitle" | translate }}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      @for (stat of stats; track stat.value; let i = $index) {
+      <div
+        class="text-center group animate-fade-in-scale gpu-accelerated"
+        [class]="'animate-delay-' + (i + 2) * 100"
+      >
+        <div
+          class="glass-effect rounded-2xl p-8 backdrop-blur-sm border border-white/20 group-hover:border-white/40 transition-all duration-300 card-interactive"
+        >
+          <!-- Animated icon/illustration -->
+          <div
+            class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300 animate-pulse-soft"
+          >
+            @switch (i) { @case (0) {
+
+            <svg
+              class="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+              ></path>
+            </svg>
+            } @case (1) {
+
+            <svg
+              class="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            } @case (2) {
+
+            <svg
+              class="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            } @case (3) {
+
+            <svg
+              class="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              ></path>
+            </svg>
+            } }
+          </div>
+
+          <div
+            class="text-5xl md:text-6xl font-bold mb-4 group-hover:scale-110 transition-transform duration-300 text-white"
+          >
+            {{ stat.value }}
+          </div>
+
+          <div
+            class="text-lg font-medium text-white/90 group-hover:text-white transition-colors duration-300"
+          >
+            {{ stat.labelKey | translate }}
+          </div>
+        </div>
       </div>
       }
     </div>

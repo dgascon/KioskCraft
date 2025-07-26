@@ -1,11 +1,6 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, signal, inject, HostListener } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-
-interface Language {
-  code: string;
-  name: string;
-}
+import { LocaleService } from '../../services/locale.service';
 
 @Component({
   selector: 'app-language-toggle',
@@ -14,28 +9,27 @@ interface Language {
   imports: [TranslateModule]
 })
 export class LanguageToggleComponent {
-  private router = inject(Router);
-  private route = inject(ActivatedRoute);
+  private localeService = inject(LocaleService);
 
-  isOpen = signal(false);
+  readonly isOpen = signal(false);
+  readonly currentLocale = this.localeService.currentLocale;
+  readonly currentLocaleInfo = this.localeService.currentLocaleInfo;
+  readonly availableLocales = this.localeService.availableLocales;
 
-  currentLocale = computed(() => {
-    const urlSegments = this.router.url.split('/');
-    return urlSegments[1] || 'fr-FR';
-  });
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    const target = event.target as HTMLElement;
+    const dropdown = document.querySelector('.language-dropdown');
+    
+    if (dropdown && !dropdown.contains(target)) {
+      this.closeDropdown();
+    }
+  }
 
-  supportedLanguages: Language[] = [
-    { code: 'fr-FR', name: 'fr-FR' },
-    { code: 'en-US', name: 'en-US' }
-  ];
-
-  currentLanguage = computed(() =>
-    this.supportedLanguages.find(lang => lang.code === this.currentLocale()) || this.supportedLanguages[0]
-  );
-
-  availableLanguages = computed(() =>
-    this.supportedLanguages.filter(lang => lang.code !== this.currentLocale())
-  );
+  @HostListener('document:keydown.escape')
+  onEscapeKey(): void {
+    this.closeDropdown();
+  }
 
   toggleDropdown(): void {
     this.isOpen.update(value => !value);
@@ -45,19 +39,16 @@ export class LanguageToggleComponent {
     this.isOpen.set(false);
   }
 
-  switchLanguage(newLocale: string): void {
-    const currentUrl = this.router.url;
-    const urlSegments = currentUrl.split('/');
-
-    // Replace the locale in the URL (first segment after /)
-    if (urlSegments.length > 1) {
-      urlSegments[1] = newLocale;
-    } else {
-      urlSegments.push(newLocale);
+  async switchLanguage(newLocale: string): Promise<void> {
+    try {
+      await this.localeService.switchToLocale(newLocale);
+      this.closeDropdown();
+    } catch (error) {
+      console.error('Error switching language:', error);
     }
+  }
 
-    const newUrl = urlSegments.join('/');
-    this.router.navigateByUrl(newUrl);
-    this.closeDropdown();
+  getLocaleDisplayName(locale: string): string {
+    return this.localeService.getLocaleDisplayName(locale);
   }
 }

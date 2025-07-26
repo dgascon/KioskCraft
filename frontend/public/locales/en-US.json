@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "title": "Create custom restaurant kiosk interfaces for your franchisees",
+    "subtitle": "The SaaS platform that enables franchisors to deploy personalized ordering kiosks, consistent with their brand identity, while offering local flexibility to their franchisees.",
+    "cta_start": "30-day free trial",
+    "cta_demo": "See demo",
+    "cta_start_aria": "Start your 30-day free trial now",
+    "cta_demo_aria": "Schedule a KioskCraft demonstration",
+    "feature1": "24h setup",
+    "feature2": "Dedicated support",
+    "feature3": "No commitment",
+    "discover": "Discover"
+  },
+  "cta": {
+    "title": "Ready to revolutionize your restaurant?",
+    "subtitle": "Join hundreds of franchisors who have already transformed their business with KioskCraft. Start your free trial today.",
+    "button_start": "Start for free",
+    "button_demo": "Schedule a demo",
+    "button_start_aria": "Start your free KioskCraft trial",
+    "button_demo_aria": "Schedule a personalized demonstration",
+    "features": "✓ 30-day free trial • ✓ No credit card required • ✓ 24h installation",
+    "free_trial": "✓ 30-day free trial",
+    "no_card": "✓ No credit card required",
+    "quick_setup": "✓ 24h installation",
+    "adopted_by": "Already adopted by:"
+  },
+  "features": {
+    "title": "Why choose KioskCraft?",
+    "subtitle": "Our complete solution transforms your restaurant by increasing your sales by 35% through an optimized customer experience and advanced management tools.",
+    "learn_more": "Learn more",
+    "social_proof": "+500 restaurants use KioskCraft",
+    "social_proof_subtitle": "Join them today",
+    "feature1": {
+      "title": "Intuitive interface",
+      "description": "Create custom interfaces with our drag & drop editor. Adapt every element to your brand identity.",
+      "item1": "Visual drag & drop editor",
+      "item2": "Customizable templates",
+      "item3": "Real-time preview"
+    },
+    "feature2": {
+      "title": "Advanced analytics",
+      "description": "Track your kiosks' performance with detailed analytics and optimize your sales.",
+      "item1": "Real-time dashboard",
+      "item2": "Conversion metrics",
+      "item3": "Custom reports"
+    },
+    "feature3": {
+      "title": "24/7 support",
+      "description": "Our team of experts assists you in deploying and maintaining your kiosks.",
+      "item1": "Dedicated technical support",
+      "item2": "Training included",
+      "item3": "Proactive maintenance"
+    }
+  },
+  "testimonials": {
+    "title": "They trust us",
+    "subtitle": "Leading franchisors transform their business with KioskCraft"
+  },
+  "theme": {
+    "light": "Enable light mode",
+    "dark": "Enable dark mode"
+  },
+  "language": {
+    "change_aria": "Change language -",
+    "switch_to": "Switch to {{language}}"
+  },
+  "stats": {
+    "title": "Results that speak for themselves",
+    "subtitle": "Discover KioskCraft's impact on our clients",
+    "sales_increase": "Sales increase",
+    "wait_time_reduction": "Wait time reduced",
+    "kiosks_deployed": "Kiosks deployed",
+    "customer_satisfaction": "Customer satisfaction"
+  },
+  "footer": {
+    "description": "The restaurant kiosk solution that transforms your business.",
+    "copyright": "© 2024 KioskCraft. All rights reserved.",
+    "social_aria": "Follow us on",
+    "sections": {
+      "product": {
+        "title": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "demo": "Demo",
+        "documentation": "Documentation"
+      },
+      "support": {
+        "title": "Support",
+        "help_center": "Help Center",
+        "contact": "Contact",
+        "training": "Training",
+        "api": "API"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "careers": "Careers",
+        "press": "Press",
+        "partners": "Partners"
+      }
+    },
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Legal Terms",
+      "conditions": "Terms of Service"
+    }
+  }
+}

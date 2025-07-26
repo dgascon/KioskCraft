@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "title": "Créez des interfaces bornes restaurant sur-mesure pour vos franchisés",
+    "subtitle": "La plateforme SaaS qui permet aux franchiseurs de déployer des bornes de commande personnalisées, cohérentes avec leur identité de marque, tout en offrant la flexibilité locale à leurs franchisés.",
+    "cta_start": "Essai gratuit 30 jours",
+    "cta_demo": "Voir la démo",
+    "cta_start_aria": "Commencer votre essai gratuit de 30 jours maintenant",
+    "cta_demo_aria": "Planifier une démonstration de KioskCraft",
+    "feature1": "Setup en 24h",
+    "feature2": "Support dédié",
+    "feature3": "Sans engagement",
+    "discover": "Découvrir"
+  },
+  "cta": {
+    "title": "Prêt à révolutionner votre restaurant ?",
+    "subtitle": "Rejoignez des centaines de franchiseurs qui ont déjà transformé leur business avec KioskCraft. Démarrez votre essai gratuit dès aujourd'hui.",
+    "button_start": "Commencer gratuitement",
+    "button_demo": "Planifier une démo",
+    "button_start_aria": "Commencer votre essai gratuit KioskCraft",
+    "button_demo_aria": "Planifier une démonstration personnalisée",
+    "features": "✓ Essai gratuit 30 jours • ✓ Pas de carte bancaire requise • ✓ Installation en 24h",
+    "free_trial": "✓ Essai gratuit 30 jours",
+    "no_card": "✓ Pas de carte bancaire requise",
+    "quick_setup": "✓ Installation en 24h",
+    "adopted_by": "Déjà adoptée par :"
+  },
+  "features": {
+    "title": "Pourquoi choisir KioskCraft ?",
+    "subtitle": "Notre solution complète transforme votre restaurant en augmentant vos ventes de 35% grâce à une expérience client optimisée et des outils de gestion avancés.",
+    "learn_more": "En savoir plus",
+    "social_proof": "+500 restaurants utilisent KioskCraft",
+    "social_proof_subtitle": "Rejoignez-les dès aujourd'hui",
+    "feature1": {
+      "title": "Interface intuitive",
+      "description": "Créez des interfaces personnalisées avec notre éditeur drag & drop. Adaptez chaque élément à votre identité de marque.",
+      "item1": "Éditeur visuel drag & drop",
+      "item2": "Templates personnalisables",
+      "item3": "Preview temps réel"
+    },
+    "feature2": {
+      "title": "Analytics avancés",
+      "description": "Suivez les performances de vos bornes avec des analytics détaillés et optimisez vos ventes.",
+      "item1": "Dashboard temps réel",
+      "item2": "Métriques de conversion",
+      "item3": "Rapports personnalisés"
+    },
+    "feature3": {
+      "title": "Support 24/7",
+      "description": "Notre équipe d'experts vous accompagne dans le déploiement et la maintenance de vos bornes.",
+      "item1": "Support technique dédié",
+      "item2": "Formation incluse",
+      "item3": "Maintenance proactive"
+    }
+  },
+  "testimonials": {
+    "title": "Ils nous font confiance",
+    "subtitle": "Des franchiseurs leaders transforment leur business avec KioskCraft"
+  },
+  "theme": {
+    "light": "Activer le mode clair",
+    "dark": "Activer le mode sombre"
+  },
+  "language": {
+    "change_aria": "Changer de langue -",
+    "switch_to": "Basculer vers {{language}}"
+  },
+  "stats": {
+    "title": "Des résultats qui parlent d'eux-mêmes",
+    "subtitle": "Découvrez l'impact de KioskCraft sur nos clients",
+    "sales_increase": "Augmentation des ventes",
+    "wait_time_reduction": "Temps d'attente réduit",
+    "kiosks_deployed": "Bornes déployées",
+    "customer_satisfaction": "Satisfaction client"
+  },
+  "footer": {
+    "description": "La solution borne restaurant qui transforme votre business.",
+    "copyright": "© 2024 KioskCraft. Tous droits réservés.",
+    "social_aria": "Suivez-nous sur",
+    "sections": {
+      "product": {
+        "title": "Produit",
+        "features": "Fonctionnalités",
+        "pricing": "Tarifs",
+        "demo": "Démo",
+        "documentation": "Documentation"
+      },
+      "support": {
+        "title": "Support",
+        "help_center": "Centre d'aide",
+        "contact": "Contact",
+        "training": "Formation",
+        "api": "API"
+      },
+      "company": {
+        "title": "Entreprise",
+        "about": "À propos",
+        "careers": "Carrières",
+        "press": "Presse",
+        "partners": "Partenaires"
+      }
+    },
+    "legal": {
+      "privacy": "Confidentialité",
+      "terms": "Mentions légales",
+      "conditions": "CGU"
+    }
+  }
+}

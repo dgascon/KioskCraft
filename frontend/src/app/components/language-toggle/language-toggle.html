@@ -1,15 +1,16 @@
-<div class="relative">
+<div class="relative language-dropdown">
   <button
     (click)="toggleDropdown()"
-    class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 text-gray-900 dark:text-white"
+    class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
     [attr.aria-label]="
-      ('language.change_aria' | translate) + ' ' + currentLanguage().name
+      ('language.change_aria' | translate) + ' ' + getLocaleDisplayName(currentLocale())
     "
     [attr.aria-expanded]="isOpen()"
     aria-haspopup="true"
+    type="button"
   >
     <span class="text-sm font-medium">{{
-      currentLanguage().code.toUpperCase()
+      currentLocale().split('-')[0].toUpperCase()
     }}</span>
     <svg
       class="w-4 h-4 transition-transform duration-200"
@@ -17,6 +18,7 @@
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
+      aria-hidden="true"
     >
       <path
         stroke-linecap="round"
@@ -30,14 +32,20 @@
   @if (isOpen()) {
   <div
     class="absolute top-full left-0 mt-2 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg min-w-[140px] z-50"
+    role="menu"
+    aria-orientation="vertical"
     (click)="$event.stopPropagation()"
   >
-    @for (language of availableLanguages(); track language.code) {
+    @for (locale of availableLocales(); track locale.code) {
     <button
-      (click)="switchLanguage(language.code)"
-      class="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors"
+      (click)="switchLanguage(locale.code)"
+      class="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-700"
+      role="menuitem"
+      type="button"
+      [attr.aria-label]="'language.switch_to' | translate: { language: locale.nativeName }"
     >
-      <span class="text-sm font-medium">{{ language.name }}</span>
+      <span class="text-sm font-medium">{{ locale.nativeName }}</span>
+      <span class="text-xs text-gray-500 dark:text-gray-400">{{ locale.code.split('-')[0].toUpperCase() }}</span>
     </button>
     }
   </div>

@@ -1,33 +1,157 @@
 <section
-  class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 dark:from-gray-800 dark:to-gray-900 text-white"
+  class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 dark:from-gray-800 dark:to-gray-900 text-white relative overflow-hidden"
 >
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-4xl md:text-5xl font-bold mb-6">
-      {{ 'cta.title' | translate }}
-    </h2>
-    <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-100">
-      {{ 'cta.subtitle' | translate }}
-    </p>
+  <div class="absolute inset-0 pointer-events-none">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse-soft"
+    ></div>
+
+    <div class="absolute top-20 left-20 animate-float opacity-20">
+      <div class="w-20 h-20 rounded-full bg-white animate-pulse-soft"></div>
+    </div>
+    <div
+      class="absolute bottom-20 right-20 animate-float animate-delay-400 opacity-15"
+    >
+      <div
+        class="w-32 h-32 rounded-full bg-gradient-to-r from-blue-400 to-indigo-400"
+      ></div>
+    </div>
+
+    <div class="absolute top-10 right-10 animate-rotate-glow opacity-10">
+      <svg class="w-40 h-40 text-white" viewBox="0 0 100 100">
+        <polygon
+          points="50,10 90,90 10,90"
+          stroke="currentColor"
+          stroke-width="1"
+          fill="none"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 text-center relative">
+    <div class="mb-12 animate-fade-in-up">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        {{ "cta.title" | translate }}
+      </h2>
+      <p
+        class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto text-white/90 animate-fade-in-up animate-delay-200"
+      >
+        {{ "cta.subtitle" | translate }}
+      </p>
+    </div>
 
     <div
-      class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+      class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 animate-fade-in-up animate-delay-300"
     >
       <button
-        class="bg-orange-700 hover:bg-orange-800 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+        class="group bg-white text-gray-900 font-bold py-5 px-10 rounded-full text-xl btn-interactive gpu-accelerated relative overflow-hidden"
         [attr.aria-label]="'cta.button_start_aria' | translate"
       >
-        {{ 'cta.button_start' | translate }}
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
+        ></div>
+        <span
+          class="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors duration-300"
+        >
+          <svg
+            class="w-6 h-6 transition-transform group-hover:rotate-12"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 10V3L4 14h7v7l9-11h-7z"
+            ></path>
+          </svg>
+          {{ "cta.button_start" | translate }}
+          <svg
+            class="w-5 h-5 transition-transform group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            ></path>
+          </svg>
+        </span>
       </button>
+
       <button
-        class="border-2 border-white text-white hover:bg-white hover:text-blue-700 dark:hover:text-gray-900 font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300"
+        class="group border-3 border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-5 px-10 rounded-full text-xl btn-interactive glass-effect"
         [attr.aria-label]="'cta.button_demo_aria' | translate"
       >
-        {{ 'cta.button_demo' | translate }}
+        <span class="flex items-center gap-3">
+          <svg
+            class="w-6 h-6 transition-transform group-hover:scale-110"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+            ></path>
+          </svg>
+          {{ "cta.button_demo" | translate }}
+        </span>
       </button>
     </div>
 
-    <p class="text-sm text-gray-200">
-      {{ 'cta.features' | translate }}
-    </p>
+    <div class="animate-fade-in-up animate-delay-400">
+      <div
+        class="inline-flex items-center gap-8 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20"
+      >
+        <div class="flex items-center gap-2 text-sm font-medium">
+          <div
+            class="w-2 h-2 bg-green-400 rounded-full animate-pulse-soft"
+          ></div>
+          <span>{{ "cta.free_trial" | translate }}</span>
+        </div>
+        <div class="w-px h-4 bg-white/30"></div>
+        <div class="flex items-center gap-2 text-sm font-medium">
+          <div
+            class="w-2 h-2 bg-green-400 rounded-full animate-pulse-soft animate-delay-200"
+          ></div>
+          <span>{{ "cta.no_card" | translate }}</span>
+        </div>
+        <div class="w-px h-4 bg-white/30"></div>
+        <div class="flex items-center gap-2 text-sm font-medium">
+          <div
+            class="w-2 h-2 bg-green-400 rounded-full animate-pulse-soft animate-delay-400"
+          ></div>
+          <span>{{ "cta.quick_setup" | translate }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 animate-fade-in-up animate-delay-500">
+      <p class="text-sm text-white/70 mb-4">
+        {{ "cta.adopted_by" | translate }}
+      </p>
+      <div class="flex justify-center items-center gap-8 opacity-60">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-8 bg-white/20 rounded animate-pulse-soft"></div>
+          <div
+            class="w-20 h-8 bg-white/20 rounded animate-pulse-soft animate-delay-100"
+          ></div>
+          <div
+            class="w-18 h-8 bg-white/20 rounded animate-pulse-soft animate-delay-200"
+          ></div>
+          <div
+            class="w-16 h-8 bg-white/20 rounded animate-pulse-soft animate-delay-300"
+          ></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

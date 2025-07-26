@@ -19,30 +19,30 @@ interface FooterSection {
 export class FooterSectionComponent {
   footerSections: FooterSection[] = [
     {
-      title: 'Produit',
+      title: 'footer.sections.product.title',
       links: [
-        { text: 'Fonctionnalités', href: '#' },
-        { text: 'Tarifs', href: '#' },
-        { text: 'Démo', href: '#' },
-        { text: 'Documentation', href: '#' }
+        { text: 'footer.sections.product.features', href: '#' },
+        { text: 'footer.sections.product.pricing', href: '#' },
+        { text: 'footer.sections.product.demo', href: '#' },
+        { text: 'footer.sections.product.documentation', href: '#' }
       ]
     },
     {
-      title: 'Support',
+      title: 'footer.sections.support.title',
       links: [
-        { text: 'Centre d\'aide', href: '#' },
-        { text: 'Contact', href: '#' },
-        { text: 'Formation', href: '#' },
-        { text: 'API', href: '#' }
+        { text: 'footer.sections.support.help_center', href: '#' },
+        { text: 'footer.sections.support.contact', href: '#' },
+        { text: 'footer.sections.support.training', href: '#' },
+        { text: 'footer.sections.support.api', href: '#' }
       ]
     },
     {
-      title: 'Entreprise',
+      title: 'footer.sections.company.title',
       links: [
-        { text: 'À propos', href: '#' },
-        { text: 'Carrières', href: '#' },
-        { text: 'Presse', href: '#' },
-        { text: 'Partenaires', href: '#' }
+        { text: 'footer.sections.company.about', href: '#' },
+        { text: 'footer.sections.company.careers', href: '#' },
+        { text: 'footer.sections.company.press', href: '#' },
+        { text: 'footer.sections.company.partners', href: '#' }
       ]
     }
   ];
@@ -66,8 +66,8 @@ export class FooterSectionComponent {
   ];
 
   legalLinks = [
-    { text: 'Confidentialité', href: '#' },
-    { text: 'Mentions légales', href: '#' },
-    { text: 'CGU', href: '#' }
+    { text: 'footer.legal.privacy', href: '#' },
+    { text: 'footer.legal.terms', href: '#' },
+    { text: 'footer.legal.conditions', href: '#' }
   ];
 }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- French URLs -->
+  <url>
+    <loc>https://kioskcraft.com/fr-FR/</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/fr-FR/features</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/features" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/features" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/fr-FR/pricing</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/pricing" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/pricing" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/fr-FR/demo</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/demo" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/demo" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/fr-FR/contact</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/contact" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/contact" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/fr-FR/about</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/about" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/about" />
+  </url>
+
+  <!-- English URLs -->
+  <url>
+    <loc>https://kioskcraft.com/en-US/</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/en-US/features</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/features" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/features" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/en-US/pricing</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/pricing" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/pricing" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/en-US/demo</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/demo" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/demo" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/en-US/contact</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/contact" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/contact" />
+  </url>
+
+  <url>
+    <loc>https://kioskcraft.com/en-US/about</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/about" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/about" />
+  </url>
+
+  <!-- Default redirect -->
+  <url>
+    <loc>https://kioskcraft.com/</loc>
+    <lastmod>2024-01-20T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://kioskcraft.com/en-US/" />
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://kioskcraft.com/fr-FR/" />
+  </url>
+
+</urlset>

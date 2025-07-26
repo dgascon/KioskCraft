@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Stat {
   value: string;
-  label: string;
+  labelKey: string;
 }
 
 @Component({
   selector: 'app-stats-section',
   standalone: true,
-  templateUrl: './stats-section.html'
+  templateUrl: './stats-section.html',
+  imports: [TranslateModule]
 })
 export class StatsSectionComponent {
   stats: Stat[] = [
-    { value: '+35%', label: 'Augmentation des ventes' },
-    { value: '-60%', label: 'Temps d\'attente réduit' },
-    { value: '500+', label: 'Bornes déployées' },
-    { value: '98%', label: 'Satisfaction client' }
+    { value: '+35%', labelKey: 'stats.sales_increase' },
+    { value: '-60%', labelKey: 'stats.wait_time_reduction' },
+    { value: '500+', labelKey: 'stats.kiosks_deployed' },
+    { value: '98%', labelKey: 'stats.customer_satisfaction' }
   ];
 }

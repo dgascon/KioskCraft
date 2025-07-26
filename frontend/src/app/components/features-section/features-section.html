@@ -1,68 +1,179 @@
-<section id="features" class="py-20 bg-gray-50 dark:bg-gray-900">
-  <div class="container mx-auto px-4">
+<section
+  id="features"
+  class="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden"
+>
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-20 right-10 opacity-5">
+      <svg
+        class="w-64 h-64 text-blue-500 animate-rotate-glow"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="currentColor"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <circle
+          cx="50"
+          cy="50"
+          r="25"
+          stroke="currentColor"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <circle
+          cx="50"
+          cy="50"
+          r="10"
+          stroke="currentColor"
+          stroke-width="0.5"
+          fill="none"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 relative">
     <div class="text-center mb-16">
       <h2
-        class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+        class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in-up gpu-accelerated"
       >
         {{ "features.title" | translate }}
       </h2>
-      <p class="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+      <p
+        class="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto animate-fade-in-up animate-delay-200"
+      >
         {{ "features.subtitle" | translate }}
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      @for (feature of features; track feature.title) {
+      @for (feature of features; track feature.title; let i = $index) {
       <div
-        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+        class="card-interactive bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg relative overflow-hidden group animate-fade-in-scale gpu-accelerated"
+        [class]="'animate-delay-' + (i + 3) * 100"
       >
         <div
-          class="w-16 h-16 {{
-            getColorClasses(feature.color).background
-          }} rounded-full flex items-center justify-center mb-6"
-        >
-          <svg
-            class="w-8 h-8 {{ getColorClasses(feature.color).text }}"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              [attr.d]="feature.icon"
-            ></path>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-          {{ feature.title | translate }}
-        </h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-6">
-          {{ feature.description | translate }}
-        </p>
-        <ul class="space-y-2">
-          @for (item of feature.features; track item) {
-          <li
-            class="flex items-center text-sm text-gray-700 dark:text-gray-300"
+          class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        ></div>
+
+        <div class="relative z-10">
+          <div
+            class="w-16 h-16 {{
+              getColorClasses(feature.color).background
+            }} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 animate-pulse-soft"
           >
             <svg
-              class="w-4 h-4 text-green-500 mr-2"
-              fill="currentColor"
-              viewBox="0 0 20 20"
+              class="w-8 h-8 {{
+                getColorClasses(feature.color).text
+              }} group-hover:animate-pulse-soft"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
               <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                [attr.d]="feature.icon"
               ></path>
             </svg>
-            {{ item | translate }}
-          </li>
-          }
-        </ul>
+          </div>
+
+          <h3
+            class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
+          >
+            {{ feature.title | translate }}
+          </h3>
+
+          <p
+            class="text-gray-700 dark:text-gray-300 mb-6 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-300"
+          >
+            {{ feature.description | translate }}
+          </p>
+
+          <!-- Enhanced feature list with micro-animations -->
+          <ul class="space-y-3">
+            @for (item of feature.features; track item; let j = $index) {
+            <li
+              class="flex items-center text-sm text-gray-700 dark:text-gray-300 group-hover:translate-x-1 transition-transform duration-300"
+              [style.transition-delay]="j * 50 + 'ms'"
+            >
+              <div
+                class="w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mr-3 group-hover:bg-green-200 dark:group-hover:bg-green-800/50 transition-colors duration-300"
+              >
+                <svg
+                  class="w-3 h-3 text-green-600 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <span class="font-medium">{{ item | translate }}</span>
+            </li>
+            }
+          </ul>
+
+          <div
+            class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <button
+              class="text-blue-600 dark:text-blue-400 font-medium text-sm hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 transition-colors duration-200"
+            >
+              {{ "features.learn_more" | translate }}
+              <svg
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
       }
+    </div>
+
+    <!-- Enhanced call-to-action section -->
+    <div class="text-center mt-16 animate-fade-in-up animate-delay-600">
+      <div
+        class="inline-flex items-center gap-4 bg-white dark:bg-gray-800 rounded-full px-8 py-4 shadow-lg"
+      >
+        <div class="flex -space-x-2">
+          <div
+            class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse-soft"
+          ></div>
+          <div
+            class="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-blue-500 animate-pulse-soft animate-delay-200"
+          ></div>
+          <div
+            class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 animate-pulse-soft animate-delay-400"
+          ></div>
+        </div>
+        <div class="text-left">
+          <p class="text-sm font-medium text-gray-900 dark:text-white">
+            {{ "features.social_proof" | translate }}
+          </p>
+          <p class="text-xs text-gray-600 dark:text-gray-400">
+            {{ "features.social_proof_subtitle" | translate }}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
