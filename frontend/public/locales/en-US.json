@@ -104,5 +104,17 @@
       "terms": "Legal Terms",
       "conditions": "Terms of Service"
     }
+  },
+  "seo": {
+    "title": "KioskCraft - Innovative Restaurant Kiosk Solution | Customizable Touch Interface",
+    "description": "Transform your restaurant with KioskCraft, the interactive kiosk solution for franchisors. Customizable touch interface, multi-tenant management, sales optimization.",
+    "keywords": "restaurant kiosk solution, interactive restaurant kiosk, touch interface restaurant, restaurant ordering kiosk, restaurant kiosk system, franchise touch kiosk, self-service restaurant kiosk",
+    "ogTitle": "KioskCraft - Restaurant Kiosk Solution for Franchisors",
+    "ogDescription": "Complete SaaS solution to create and manage customized restaurant kiosks. Boost your sales with our innovative touch interfaces.",
+    "structuredData": {
+      "description": "SaaS solution to create and manage interactive restaurant kiosks",
+      "serviceType": "Restaurant Management Software",
+      "areaServedCountry": "United States"
+    }
   }
 }

@@ -1,5 +1,7 @@
-import { Component, input, OnInit, inject } from '@angular/core';
+import { Component, input, OnInit, inject, computed } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
+import { LocaleService } from '../../services/locale.service';
 
 interface SEOData {
   title: string;
@@ -19,24 +21,35 @@ interface SEOData {
 export class SeoHeadComponent implements OnInit {
   private readonly meta = inject(Meta);
   private readonly title = inject(Title);
+  private readonly translate = inject(TranslateService);
+  private readonly localeService = inject(LocaleService);
 
-  readonly seoData = input<SEOData>({
-    title: 'KioskCraft - Solution Borne Restaurant Innovante | Interface Tactile Personnalisable',
-    description: 'Transformez votre restaurant avec KioskCraft, la solution borne interactive pour franchiseurs. Interface tactile personnalisable, gestion multi-tenant, optimisation des ventes.',
-    keywords: 'solution borne restaurant, borne interactive restaurant, interface tactile restaurant, borne commande restaurant, système borne restaurant, franchise borne tactile, borne self-service restaurant',
-    ogTitle: 'KioskCraft - Solution Borne Restaurant pour Franchiseurs',
-    ogDescription: 'Solution SaaS complète pour créer et gérer des bornes restaurant personnalisées. Augmentez vos ventes avec nos interfaces tactiles innovantes.',
-    ogImage: '/assets/images/kioskcraft-og-image.webp',
-    canonicalUrl: 'https://kioskcraft.com'
+  readonly seoData = input<Partial<SEOData>>({});
+
+  readonly translatedSeoData = computed(() => {
+    const inputData = this.seoData();
+    const currentLocale = this.localeService.currentLocale();
+
+    return {
+      title: inputData.title || this.translate.instant('seo.title'),
+      description: inputData.description || this.translate.instant('seo.description'),
+      keywords: inputData.keywords || this.translate.instant('seo.keywords'),
+      ogTitle: inputData.ogTitle || this.translate.instant('seo.ogTitle'),
+      ogDescription: inputData.ogDescription || this.translate.instant('seo.ogDescription'),
+      ogImage: inputData.ogImage || '/assets/images/kioskcraft-og-image.webp',
+      canonicalUrl: inputData.canonicalUrl || `https://kioskcraft.com/${currentLocale}`,
+      structuredData: inputData.structuredData
+    } as SEOData;
   });
 
   ngOnInit() {
     this.updateSEOTags();
+
   }
 
   private updateSEOTags() {
-    const data = this.seoData();
-    
+    const data = this.translatedSeoData();
+
     this.title.setTitle(data.title);
 
     this.meta.updateTag({ name: 'description', content: data.description });
@@ -85,12 +98,13 @@ export class SeoHeadComponent implements OnInit {
   }
 
   private addDefaultStructuredData() {
+    const currentLocale = this.localeService.currentLocale();
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
       name: 'KioskCraft',
-      description: 'Solution SaaS pour créer et gérer des bornes restaurant interactives',
-      url: 'https://kioskcraft.com',
+      description: this.translate.instant('seo.structuredData.description'),
+      url: `https://kioskcraft.com/${currentLocale}`,
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
       offers: {
@@ -104,10 +118,10 @@ export class SeoHeadComponent implements OnInit {
         name: 'KioskCraft',
         url: 'https://kioskcraft.com'
       },
-      serviceType: 'Restaurant Management Software',
+      serviceType: this.translate.instant('seo.structuredData.serviceType'),
       areaServed: {
         '@type': 'Country',
-        name: 'France'
+        name: this.translate.instant('seo.structuredData.areaServedCountry')
       }
     };
     this.addStructuredData(structuredData);

@@ -104,5 +104,17 @@
       "terms": "Mentions légales",
       "conditions": "CGU"
     }
+  },
+  "seo": {
+    "title": "KioskCraft - Solution Borne Restaurant Innovante | Interface Tactile Personnalisable",
+    "description": "Transformez votre restaurant avec KioskCraft, la solution borne interactive pour franchiseurs. Interface tactile personnalisable, gestion multi-tenant, optimisation des ventes.",
+    "keywords": "solution borne restaurant, borne interactive restaurant, interface tactile restaurant, borne commande restaurant, système borne restaurant, franchise borne tactile, borne self-service restaurant",
+    "ogTitle": "KioskCraft - Solution Borne Restaurant pour Franchiseurs",
+    "ogDescription": "Solution SaaS complète pour créer et gérer des bornes restaurant personnalisées. Augmentez vos ventes avec nos interfaces tactiles innovantes.",
+    "structuredData": {
+      "description": "Solution SaaS pour créer et gérer des bornes restaurant interactives",
+      "serviceType": "Logiciel de gestion restaurant",
+      "areaServedCountry": "France"
+    }
   }
 }
