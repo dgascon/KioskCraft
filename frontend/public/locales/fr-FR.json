@@ -81,21 +81,16 @@
         "title": "Produit",
         "features": "Fonctionnalités",
         "pricing": "Tarifs",
-        "demo": "Démo",
-        "documentation": "Documentation"
+        "demo": "Démo"
       },
       "support": {
         "title": "Support",
         "help_center": "Centre d'aide",
-        "contact": "Contact",
-        "training": "Formation",
-        "api": "API"
+        "contact": "Contact"
       },
       "company": {
         "title": "Entreprise",
         "about": "À propos",
-        "careers": "Carrières",
-        "press": "Presse",
         "partners": "Partenaires"
       }
     },
@@ -103,6 +98,452 @@
       "privacy": "Confidentialité",
       "terms": "Mentions légales",
       "conditions": "CGU"
+    }
+  },
+  "pages": {
+    "features": {
+      "hero": {
+        "title": "Fonctionnalités complètes pour votre restaurant",
+        "subtitle": "Découvrez tous les outils dont vous avez besoin pour créer et gérer des bornes restaurant performantes avec KioskCraft."
+      },
+      "core": {
+        "title": "Fonctionnalités essentielles",
+        "subtitle": "Des outils puissants pour transformer votre expérience client",
+        "editor": {
+          "title": "Éditeur drag & drop",
+          "description": "Créez des interfaces intuitives sans code avec notre éditeur visuel avancé.",
+          "feature1": "Interface glisser-déposer intuitive",
+          "feature2": "Bibliothèque de composants prêts"
+        },
+        "architecture": {
+          "title": "Architecture multi-tenant",
+          "description": "Gérez facilement plusieurs franchisés avec une architecture évolutive et sécurisée.",
+          "feature1": "Isolation complète des données",
+          "feature2": "Permissions granulaires"
+        },
+        "analytics": {
+          "title": "Analytics en temps réel",
+          "description": "Suivez les performances et optimisez vos ventes avec des données précises.",
+          "feature1": "Tableaux de bord personnalisés",
+          "feature2": "Alertes intelligentes"
+        },
+        "pwa": {
+          "title": "Technologie PWA",
+          "description": "Interface rapide et fiable qui fonctionne même hors ligne.",
+          "feature1": "Performance native",
+          "feature2": "Mode hors ligne"
+        },
+        "security": {
+          "title": "Sécurité & conformité",
+          "description": "Protection avancée des données et conformité RGPD garantie.",
+          "feature1": "Chiffrement bout en bout",
+          "feature2": "Conformité RGPD/PCI"
+        },
+        "integrations": {
+          "title": "Intégrations API",
+          "description": "Connectez facilement vos systèmes existants avec nos APIs robustes.",
+          "feature1": "API REST complète",
+          "feature2": "Webhooks temps réel"
+        }
+      },
+      "cta": {
+        "title": "Prêt à découvrir toutes nos fonctionnalités ?",
+        "subtitle": "Testez KioskCraft gratuitement pendant 30 jours et voyez la différence.",
+        "start_trial": "Essai gratuit 30 jours",
+        "schedule_demo": "Planifier une démo"
+      }
+    },
+    "pricing": {
+      "hero": {
+        "title": "Tarifs transparents pour tous",
+        "subtitle": "Choisissez l'offre qui correspond à vos besoins. Essai gratuit 30 jours sur tous les plans."
+      },
+      "billing": {
+        "monthly": "Mensuel",
+        "yearly": "Annuel"
+      },
+      "plans": {
+        "freemium": {
+          "name": "Gratuit",
+          "price": "0€",
+          "period": "/mois",
+          "description": "Parfait pour tester KioskCraft",
+          "feature1": "1 franchisé",
+          "feature2": "2 bornes maximum",
+          "feature3": "Templates de base",
+          "feature4": "Support communautaire",
+          "cta": "Commencer gratuitement"
+        },
+        "pro": {
+          "name": "Pro",
+          "price": "50€",
+          "period": "/mois",
+          "description": "Idéal pour les franchiseurs en croissance",
+          "badge": "Populaire",
+          "feature1": "10 franchisés",
+          "feature2": "50 bornes",
+          "feature3": "Templates avancés",
+          "feature4": "Analytics détaillés",
+          "feature5": "Support prioritaire",
+          "cta": "Essai gratuit 30 jours"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "price": "200€",
+          "period": "/mois",
+          "description": "Pour les grandes chaînes",
+          "feature1": "Franchisés illimités",
+          "feature2": "Bornes illimitées",
+          "feature3": "API complète",
+          "feature4": "Support dédié 24/7",
+          "feature5": "Formation sur site",
+          "cta": "Contacter les ventes"
+        }
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "subtitle": "Tout ce que vous devez savoir sur nos tarifs",
+        "q1": {
+          "question": "Puis-je changer de plan à tout moment ?",
+          "answer": "Oui, vous pouvez upgrader ou downgrader votre plan à tout moment. Les changements prennent effet immédiatement."
+        },
+        "q2": {
+          "question": "Y a-t-il des frais de configuration ?",
+          "answer": "Non, il n'y a aucun frais de configuration. Nous nous occupons de tout gratuitement."
+        },
+        "q3": {
+          "question": "Que se passe-t-il si je dépasse mes limites ?",
+          "answer": "Nous vous contacterons pour vous proposer un upgrade. Aucune interruption de service."
+        },
+        "q4": {
+          "question": "Proposez-vous des remises pour les gros volumes ?",
+          "answer": "Oui, nous proposons des tarifs préférentiels pour les entreprises avec plus de 100 bornes. Contactez-nous."
+        }
+      },
+      "cta": {
+        "title": "Prêt à transformer votre restaurant ?",
+        "subtitle": "Commencez votre essai gratuit aujourd'hui, aucune carte bancaire requise.",
+        "start_trial": "Essai gratuit 30 jours",
+        "contact_sales": "Contacter les ventes"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contactez notre équipe",
+        "subtitle": "Nous sommes là pour répondre à toutes vos questions et vous accompagner dans votre projet."
+      },
+      "form": {
+        "title": "Envoyez-nous un message",
+        "name": "Nom complet",
+        "name_placeholder": "Votre nom",
+        "email": "Adresse email",
+        "email_placeholder": "votre@email.com",
+        "company": "Entreprise",
+        "company_placeholder": "Nom de votre entreprise",
+        "subject": "Sujet",
+        "subjects": {
+          "general": "Question générale",
+          "sales": "Ventes et tarifs",
+          "support": "Support technique",
+          "partnership": "Partenariat",
+          "press": "Presse et médias"
+        },
+        "message": "Message",
+        "message_placeholder": "Décrivez votre projet ou votre question...",
+        "submit": "Envoyer le message"
+      },
+      "info": {
+        "title": "Informations de contact",
+        "address": {
+          "title": "Adresse",
+          "line1": "123 Rue de la Tech",
+          "line2": "75001 Paris",
+          "line3": "France"
+        },
+        "phone": {
+          "title": "Téléphone",
+          "number": "+33 1 23 45 67 89",
+          "hours": "Lun-Ven 9h-18h"
+        },
+        "email": {
+          "title": "Email",
+          "general": "contact@kioskcraft.com",
+          "support": "support@kioskcraft.com"
+        },
+        "hours": {
+          "title": "Horaires de support",
+          "weekdays": "Lundi - Vendredi: 9h00 - 18h00",
+          "weekend": "Samedi - Dimanche: 10h00 - 16h00"
+        }
+      },
+      "social": {
+        "title": "Suivez-nous"
+      },
+      "cta": {
+        "title": "Prêt pour une démonstration ?",
+        "subtitle": "Planifiez un appel avec notre équipe pour voir KioskCraft en action.",
+        "schedule_demo": "Planifier une démo"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "À propos de KioskCraft",
+        "subtitle": "Nous transformons l'industrie de la restauration avec des solutions innovantes pour les bornes de commande."
+      },
+      "mission": {
+        "title": "Notre mission",
+        "description": "KioskCraft a été créé avec une vision simple : permettre aux franchiseurs de restaurant de contrôler parfaitement leur identité de marque sur toutes leurs bornes, tout en offrant la flexibilité nécessaire à leurs franchisés.",
+        "value1": "Innovation technologique au service de l'expérience client",
+        "value2": "Solutions sur-mesure pour chaque chaîne de restaurant",
+        "value3": "Support dédié et accompagnement personnalisé"
+      },
+      "story": {
+        "title": "Notre histoire",
+        "subtitle": "Comment nous avons développé la solution SaaS de référence pour les bornes restaurant",
+        "step1": {
+          "title": "2022 - Le problème identifié",
+          "description": "Nous avons constaté que les franchiseurs avaient du mal à maintenir la cohérence de leur marque sur leurs bornes de commande."
+        },
+        "step2": {
+          "title": "2023 - Développement de la solution",
+          "description": "Création de notre plateforme multi-tenant avec un éditeur drag & drop intuitif et des outils d'analytics avancés."
+        },
+        "step3": {
+          "title": "2024 - Premiers clients",
+          "description": "Lancement réussi avec nos premiers franchiseurs partenaires et augmentation moyenne de 35% de leurs ventes."
+        },
+        "step4": {
+          "title": "Aujourd'hui - Leadership du marché",
+          "description": "Plus de 500 restaurants nous font confiance et nous continuons d'innover pour répondre aux besoins du marché."
+        }
+      },
+      "team": {
+        "title": "Notre équipe",
+        "subtitle": "Des experts passionnés qui révolutionnent l'industrie de la restauration",
+        "member1": {
+          "name": "Marie Dubois",
+          "role": "CEO & Co-fondatrice",
+          "bio": "15 ans d'expérience dans la tech et la restauration. Ancienne VP chez McDonald's Digital."
+        },
+        "member2": {
+          "name": "Pierre Martin",
+          "role": "CTO & Co-fondateur",
+          "bio": "Expert en architecture logicielle avec 12 ans d'expérience chez Google et Uber."
+        },
+        "member3": {
+          "name": "Sophie Leroy",
+          "role": "VP Product",
+          "bio": "Spécialiste UX/UI avec une passion pour l'innovation dans la restauration."
+        }
+      },
+      "values": {
+        "title": "Nos valeurs",
+        "subtitle": "Les principes qui guident notre travail au quotidien",
+        "innovation": {
+          "title": "Innovation",
+          "description": "Nous repoussons constamment les limites de la technologie."
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "Nous travaillons main dans la main avec nos clients."
+        },
+        "quality": {
+          "title": "Qualité",
+          "description": "Excellence technique et expérience utilisateur irréprochable."
+        },
+        "passion": {
+          "title": "Passion",
+          "description": "Nous aimons ce que nous faisons et ça se voit."
+        }
+      },
+      "cta": {
+        "title": "Rejoignez l'aventure KioskCraft",
+        "subtitle": "Nous recrutons des talents passionnés pour grandir avec nous.",
+        "join_us": "Rejoindre l'équipe",
+        "contact_us": "Nous contacter"
+      }
+    },
+    "partners": {
+      "hero": {
+        "title": "Notre écosystème partenaires",
+        "subtitle": "Nous collaborons avec les meilleurs pour vous offrir une solution complète et intégrée."
+      },
+      "ecosystem": {
+        "title": "Intégrations partenaires",
+        "subtitle": "KioskCraft s'intègre parfaitement avec vos outils existants"
+      },
+      "types": {
+        "payment": {
+          "title": "Paiements",
+          "description": "Intégration avec les principales solutions de paiement pour une expérience fluide."
+        },
+        "pos": {
+          "title": "Systèmes de caisse",
+          "description": "Synchronisation automatique avec votre POS pour une gestion unifiée."
+        },
+        "hardware": {
+          "title": "Matériel",
+          "description": "Compatibilité avec les principales marques d'écrans tactiles et bornes."
+        }
+      },
+      "program": {
+        "title": "Programme partenaire",
+        "subtitle": "Rejoignez notre réseau de partenaires et développez votre activité"
+      },
+      "benefits": {
+        "network": {
+          "title": "Réseau d'experts",
+          "description": "Accédez à notre réseau d'experts techniques et commerciaux."
+        },
+        "revenue": {
+          "title": "Revenus partagés",
+          "description": "Bénéficiez de commissions attractives sur chaque vente."
+        },
+        "support": {
+          "title": "Support dédié",
+          "description": "Formation et support technique pour vos équipes."
+        }
+      },
+      "cta": {
+        "title": "Devenez partenaire KioskCraft",
+        "subtitle": "Rejoignez notre écosystème et développez votre business avec nous.",
+        "apply": "Postuler maintenant"
+      }
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "subtitle": "Comment nous collectons, utilisons et protégeons vos données personnelles.",
+      "last_updated": "Dernière mise à jour : 15 janvier 2024",
+      "sections": {
+        "overview": {
+          "title": "Aperçu",
+          "content": "Chez KioskCraft, nous nous engageons à protéger votre vie privée et vos données personnelles. Cette politique explique comment nous collectons, utilisons et protégeons vos informations conformément au RGPD."
+        },
+        "data_collection": {
+          "title": "Données que nous collectons",
+          "intro": "Nous collectons les types de données suivants :",
+          "item1": "Informations d'identification (nom, email, téléphone)",
+          "item2": "Données d'utilisation de la plateforme",
+          "item3": "Données techniques (adresse IP, navigateur)",
+          "item4": "Cookies et technologies similaires"
+        },
+        "data_usage": {
+          "title": "Utilisation des données",
+          "intro": "Nous utilisons vos données pour :",
+          "item1": "Fournir et améliorer nos services",
+          "item2": "Communiquer avec vous",
+          "item3": "Analyser l'utilisation de la plateforme",
+          "item4": "Respecter nos obligations légales"
+        },
+        "data_sharing": {
+          "title": "Partage des données",
+          "content": "Nous ne vendons jamais vos données personnelles. Nous pouvons les partager uniquement avec nos partenaires de confiance pour fournir nos services, et toujours dans le respect de cette politique."
+        },
+        "security": {
+          "title": "Sécurité",
+          "content": "Nous utilisons des mesures de sécurité appropriées pour protéger vos données, incluant le chiffrement, l'authentification à deux facteurs et des audits réguliers."
+        },
+        "rights": {
+          "title": "Vos droits",
+          "intro": "Conformément au RGPD, vous avez le droit de :",
+          "item1": "Accéder à vos données personnelles",
+          "item2": "Rectifier des données inexactes",
+          "item3": "Supprimer vos données (droit à l'oubli)",
+          "item4": "Vous opposer au traitement de vos données"
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "Pour toute question concernant cette politique, contactez notre Délégué à la Protection des Données à privacy@kioskcraft.com"
+        }
+      }
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "subtitle": "Informations légales obligatoires concernant KioskCraft.",
+      "last_updated": "Dernière mise à jour : 15 janvier 2024",
+      "sections": {
+        "company": {
+          "title": "Identification de l'entreprise",
+          "name": "Raison sociale : KioskCraft SAS",
+          "form": "Forme juridique : Société par Actions Simplifiée",
+          "address": "Adresse : 123 Rue de la Tech, 75001 Paris, France",
+          "registration": "RCS : Paris B 123 456 789",
+          "vat": "Numéro TVA : FR 12 123456789"
+        },
+        "director": {
+          "title": "Directeur de la publication",
+          "content": "Marie Dubois, Présidente de KioskCraft SAS"
+        },
+        "hosting": {
+          "title": "Hébergement",
+          "provider": "Hébergeur : OVH SAS",
+          "address": "Adresse : 2 rue Kellermann, 59100 Roubaix, France",
+          "website": "Site web : www.ovh.com"
+        },
+        "intellectual_property": {
+          "title": "Propriété intellectuelle",
+          "content": "L'ensemble du contenu de ce site (textes, images, logos) est protégé par le droit d'auteur et appartient à KioskCraft ou à ses partenaires. Toute reproduction sans autorisation est interdite."
+        },
+        "liability": {
+          "title": "Responsabilité",
+          "content": "KioskCraft s'efforce de fournir des informations exactes mais ne peut garantir l'absence d'erreurs. L'utilisation des informations se fait sous votre responsabilité."
+        },
+        "applicable_law": {
+          "title": "Droit applicable",
+          "content": "Les présentes mentions légales sont régies par le droit français. Tout litige sera porté devant les tribunaux compétents de Paris."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "Pour toute question concernant ces mentions légales, contactez-nous à legal@kioskcraft.com"
+        }
+      }
+    },
+    "terms": {
+      "title": "Conditions générales d'utilisation",
+      "subtitle": "Les conditions qui régissent l'utilisation de la plateforme KioskCraft.",
+      "last_updated": "Dernière mise à jour : 15 janvier 2024",
+      "sections": {
+        "acceptance": {
+          "title": "Acceptation des conditions",
+          "content": "En utilisant la plateforme KioskCraft, vous acceptez intégralement les présentes conditions générales d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos services."
+        },
+        "service_description": {
+          "title": "Description du service",
+          "content": "KioskCraft est une plateforme SaaS permettant aux franchiseurs de créer et gérer des interfaces personnalisées pour leurs bornes de commande restaurant."
+        },
+        "user_obligations": {
+          "title": "Obligations de l'utilisateur",
+          "intro": "En utilisant nos services, vous vous engagez à :",
+          "item1": "Fournir des informations exactes et à jour",
+          "item2": "Respecter les lois et règlements en vigueur",
+          "item3": "Ne pas utiliser le service à des fins illégales",
+          "item4": "Maintenir la confidentialité de vos identifiants"
+        },
+        "payment": {
+          "title": "Conditions de paiement",
+          "content": "Les tarifs sont indiqués hors taxes. Le paiement s'effectue par prélèvement automatique selon la périodicité choisie. Tout retard de paiement peut entraîner la suspension du service."
+        },
+        "intellectual_property": {
+          "title": "Propriété intellectuelle",
+          "content": "KioskCraft conserve tous les droits de propriété intellectuelle sur la plateforme. Vous conservez vos droits sur le contenu que vous créez avec nos outils."
+        },
+        "liability": {
+          "title": "Limitation de responsabilité",
+          "content": "KioskCraft ne peut être tenu responsable des dommages indirects ou consécutifs résultant de l'utilisation de la plateforme. Notre responsabilité est limitée au montant payé pour nos services."
+        },
+        "termination": {
+          "title": "Résiliation",
+          "content": "Chaque partie peut résilier le service à tout moment avec un préavis de 30 jours. KioskCraft peut résilier immédiatement en cas de violation des conditions."
+        },
+        "modifications": {
+          "title": "Modifications",
+          "content": "KioskCraft se réserve le droit de modifier ces conditions. Les utilisateurs seront informés des changements et devront les accepter pour continuer à utiliser le service."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "Pour toute question concernant ces conditions, contactez-nous à legal@kioskcraft.com"
+        }
+      }
     }
   },
   "seo": {

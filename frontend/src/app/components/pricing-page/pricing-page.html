@@ -1,0 +1,421 @@
+<app-seo-head></app-seo-head>
+<div class="fixed top-4 left-4 z-50 flex gap-2">
+  <button 
+    (click)="navigateToHome()"
+    class="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+    title="Retour à l'accueil"
+  >
+    <svg class="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+    </svg>
+  </button>
+  <app-theme-toggle></app-theme-toggle>
+  <app-language-toggle></app-language-toggle>
+</div>
+
+<main class="min-h-screen bg-white dark:bg-gray-900 pt-20">
+  <!-- Hero Section -->
+  <section class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 dark:bg-gradient-to-br dark:from-slate-900 dark:via-gray-900 dark:to-black">
+    <!-- Financial Animated Background -->
+    <div class="absolute inset-0 opacity-20 dark:opacity-30">
+      <!-- Dollar Signs -->
+      <div class="absolute top-20 left-16 text-white opacity-40 animate-float">
+        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      
+      <!-- Credit Card -->
+      <div class="absolute top-40 right-20 text-white opacity-30 animate-float animate-delay-200">
+        <svg class="w-16 h-12" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+        </svg>
+      </div>
+      
+      <!-- Growth Chart -->
+      <svg class="absolute bottom-40 left-20 w-24 h-16 text-white opacity-40 animate-pulse-soft" viewBox="0 0 100 60">
+        <path d="M10,50 L25,40 L40,25 L55,30 L70,15 L85,10" stroke="currentColor" stroke-width="2" fill="none" class="animate-pulse-soft"/>
+        <circle cx="10" cy="50" r="2" fill="currentColor" opacity="0.6"/>
+        <circle cx="25" cy="40" r="2" fill="currentColor" opacity="0.7"/>
+        <circle cx="40" cy="25" r="2" fill="currentColor" opacity="0.8"/>
+        <circle cx="55" cy="30" r="2" fill="currentColor" opacity="0.7"/>
+        <circle cx="70" cy="15" r="2" fill="currentColor" opacity="0.9"/>
+        <circle cx="85" cy="10" r="2" fill="currentColor" opacity="1"/>
+      </svg>
+      
+      <!-- Coins -->
+      <div class="absolute bottom-32 right-1/4 animate-float animate-delay-400">
+        <div class="w-6 h-6 bg-yellow-400 rounded-full opacity-60 animate-pulse-soft"></div>
+        <div class="absolute top-2 left-4 w-4 h-4 bg-yellow-300 rounded-full opacity-50"></div>
+        <div class="absolute -top-1 left-8 w-5 h-5 bg-yellow-500 rounded-full opacity-70"></div>
+      </div>
+      
+      <!-- Percentage Signs -->
+      <div class="absolute top-1/3 left-1/3 text-white opacity-25 animate-rotate-glow">
+        <span class="text-2xl font-bold">%</span>
+      </div>
+    </div>
+    
+    <!-- Dark mode financial elements -->
+    <div class="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500">
+      <div class="absolute top-20 right-16 w-20 h-20 border border-green-400 rounded-full animate-pulse-soft opacity-20"></div>
+      <div class="absolute bottom-40 left-32 w-16 h-16 border border-emerald-400 transform rotate-45 animate-float opacity-15"></div>
+      <div class="absolute top-1/2 left-10 w-12 h-12 border border-teal-400 animate-rotate-glow opacity-10"></div>
+      
+      <!-- Digital grid -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" viewBox="0 0 100 100">
+          <defs>
+            <pattern id="pricing-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgb(16, 185, 129)" stroke-width="0.3"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#pricing-grid)"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up">
+          {{ 'pages.pricing.hero.title' | translate }}
+        </h1>
+        <p class="text-xl text-gray-100 max-w-3xl mx-auto mb-8 animate-fade-in-up animate-delay-200">
+          {{ 'pages.pricing.hero.subtitle' | translate }}
+        </p>
+        <div class="flex justify-center animate-fade-in-up animate-delay-300">
+          <div class="bg-white/10 backdrop-blur-sm dark:bg-gray-800/50 rounded-lg p-1 inline-flex border border-white/20">
+            <button 
+              (click)="setBillingPeriod('monthly')"
+              [class]="billingPeriod === 'monthly' ? 'px-4 py-2 rounded-md text-sm font-medium bg-white text-gray-900 shadow-lg' : 'px-4 py-2 rounded-md text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300'"
+            >
+              {{ 'pages.pricing.billing.monthly' | translate }}
+            </button>
+            <button 
+              (click)="setBillingPeriod('yearly')"
+              [class]="billingPeriod === 'yearly' ? 'px-4 py-2 rounded-md text-sm font-medium bg-white text-gray-900 shadow-lg' : 'px-4 py-2 rounded-md text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300'"
+            >
+              {{ 'pages.pricing.billing.yearly' | translate }}
+              <span class="ml-1 text-xs bg-yellow-400 text-gray-900 px-2 py-0.5 rounded-full font-bold animate-pulse-soft">-20%</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans Section -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <!-- Freemium Plan -->
+        <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 relative card-interactive border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-500 group animate-fade-in-scale">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10 text-center mb-8">
+            <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              {{ 'pages.pricing.plans.freemium.name' | translate }}
+            </h3>
+            <div class="flex items-center justify-center mb-4">
+              <span class="text-4xl font-bold text-gray-900 dark:text-white group-hover:scale-105 transition-transform duration-300">
+                Gratuit
+              </span>
+              <span class="text-gray-500 dark:text-gray-400 ml-2">
+                {{ getPrice('freemium').period }}
+              </span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">
+              {{ 'pages.pricing.plans.freemium.description' | translate }}
+            </p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.freemium.feature1' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.freemium.feature2' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.freemium.feature3' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.freemium.feature4' | translate }}
+              </span>
+            </li>
+          </ul>
+          
+          <button 
+            (click)="getPlan('freemium')"
+            class="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-3 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+          >
+            {{ 'pages.pricing.plans.freemium.cta' | translate }}
+          </button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700 rounded-2xl p-8 relative transform scale-105 card-interactive border-2 border-blue-400 hover:border-yellow-400 transition-all duration-500 group animate-fade-in-scale animate-delay-200 shadow-2xl hover:shadow-blue-500/25">
+          <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Floating particles -->
+          <div class="absolute inset-0 overflow-hidden rounded-2xl">
+            <div class="absolute top-4 right-4 w-2 h-2 bg-yellow-400 rounded-full animate-pulse-soft opacity-60"></div>
+            <div class="absolute bottom-8 left-8 w-1 h-1 bg-white rounded-full animate-float opacity-80"></div>
+            <div class="absolute top-1/2 right-8 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse-soft opacity-70"></div>
+          </div>
+          
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-300">
+            <span class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse-soft">
+              {{ 'pages.pricing.plans.pro.badge' | translate }}
+            </span>
+          </div>
+          
+          <div class="relative z-10 text-center mb-8">
+            <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-white/20">
+              <svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">
+              {{ 'pages.pricing.plans.pro.name' | translate }}
+            </h3>
+            <div class="flex items-center justify-center mb-4">
+              <span class="text-4xl font-bold text-white group-hover:scale-105 transition-transform duration-300">
+                {{ getPrice('pro').price }}{{ getPrice('pro').period }}
+              </span>
+              @if (billingPeriod === 'yearly' && getPrice('pro').savings) {
+                <span class="text-yellow-300 ml-2 text-sm">
+                  {{ getPrice('pro').savings }}
+                </span>
+              }
+            </div>
+            <p class="text-blue-100">
+              {{ 'pages.pricing.plans.pro.description' | translate }}
+            </p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-white">
+                {{ 'pages.pricing.plans.pro.feature1' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-white">
+                {{ 'pages.pricing.plans.pro.feature2' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-white">
+                {{ 'pages.pricing.plans.pro.feature3' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-white">
+                {{ 'pages.pricing.plans.pro.feature4' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-white">
+                {{ 'pages.pricing.plans.pro.feature5' | translate }}
+              </span>
+            </li>
+          </ul>
+          
+          <button 
+            (click)="getPlan('pro')"
+            class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            {{ 'pages.pricing.plans.pro.cta' | translate }}
+          </button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 relative">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              {{ 'pages.pricing.plans.enterprise.name' | translate }}
+            </h3>
+            <div class="flex items-center justify-center mb-4">
+              <span class="text-4xl font-bold text-gray-900 dark:text-white">
+                {{ getPrice('enterprise').price }}{{ getPrice('enterprise').period }}
+              </span>
+              @if (billingPeriod === 'yearly' && getPrice('enterprise').savings) {
+                <span class="text-green-600 ml-2 text-sm">
+                  {{ getPrice('enterprise').savings }}
+                </span>
+              }
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">
+              {{ 'pages.pricing.plans.enterprise.description' | translate }}
+            </p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.enterprise.feature1' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.enterprise.feature2' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.enterprise.feature3' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.enterprise.feature4' | translate }}
+              </span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.pricing.plans.enterprise.feature5' | translate }}
+              </span>
+            </li>
+          </ul>
+          
+          <button 
+            (click)="getPlan('enterprise')"
+            class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            {{ 'pages.pricing.plans.enterprise.cta' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.pricing.faq.title' | translate }}
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          {{ 'pages.pricing.faq.subtitle' | translate }}
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="bg-white dark:bg-gray-900 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            {{ 'pages.pricing.faq.q1.question' | translate }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            {{ 'pages.pricing.faq.q1.answer' | translate }}
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            {{ 'pages.pricing.faq.q2.question' | translate }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            {{ 'pages.pricing.faq.q2.answer' | translate }}
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            {{ 'pages.pricing.faq.q3.question' | translate }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            {{ 'pages.pricing.faq.q3.answer' | translate }}
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            {{ 'pages.pricing.faq.q4.question' | translate }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            {{ 'pages.pricing.faq.q4.answer' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-blue-600 dark:bg-blue-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        {{ 'pages.pricing.cta.title' | translate }}
+      </h2>
+      <p class="text-xl text-blue-100 mb-8">
+        {{ 'pages.pricing.cta.subtitle' | translate }}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+          {{ 'pages.pricing.cta.start_trial' | translate }}
+        </button>
+        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+          {{ 'pages.pricing.cta.contact_sales' | translate }}
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer-section></app-footer-section>

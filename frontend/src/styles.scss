@@ -180,13 +180,37 @@ body {
    MICRO-INTERACTIONS
    =============================================== */
 
+/* Links - Global hover states */
+a {
+  @apply cursor-pointer transition-all duration-300 ease-out;
+}
+
+a:hover {
+  @apply cursor-pointer;
+}
+
+/* Buttons - Interactive states */
+button {
+  @apply cursor-pointer transition-all duration-300 ease-out;
+}
+
+button:hover {
+  @apply cursor-pointer;
+}
+
+button:disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+/* Enhanced interactive elements */
 .btn-interactive {
-  @apply transition-all duration-300 ease-out;
+  @apply transition-all duration-300 ease-out cursor-pointer;
   transform: translateY(0px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-interactive:hover {
+  @apply cursor-pointer;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
@@ -197,13 +221,39 @@ body {
 }
 
 .card-interactive {
-  @apply transition-all duration-300 ease-out;
+  @apply transition-all duration-300 ease-out cursor-pointer;
   transform: translateY(0px);
 }
 
 .card-interactive:hover {
+  @apply cursor-pointer;
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Link hover effects */
+.link-hover {
+  @apply transition-all duration-300 ease-out cursor-pointer;
+  position: relative;
+}
+
+.link-hover:hover {
+  @apply cursor-pointer;
+}
+
+.link-hover:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-out;
+}
+
+.link-hover:hover:after {
+  width: 100%;
 }
 
 /* ===============================================

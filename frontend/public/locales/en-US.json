@@ -81,21 +81,16 @@
         "title": "Product",
         "features": "Features",
         "pricing": "Pricing",
-        "demo": "Demo",
-        "documentation": "Documentation"
+        "demo": "Demo"
       },
       "support": {
         "title": "Support",
         "help_center": "Help Center",
-        "contact": "Contact",
-        "training": "Training",
-        "api": "API"
+        "contact": "Contact"
       },
       "company": {
         "title": "Company",
         "about": "About",
-        "careers": "Careers",
-        "press": "Press",
         "partners": "Partners"
       }
     },
@@ -103,6 +98,452 @@
       "privacy": "Privacy",
       "terms": "Legal Terms",
       "conditions": "Terms of Service"
+    }
+  },
+  "pages": {
+    "features": {
+      "hero": {
+        "title": "Complete features for your restaurant",
+        "subtitle": "Discover all the tools you need to create and manage high-performing restaurant kiosks with KioskCraft."
+      },
+      "core": {
+        "title": "Essential features",
+        "subtitle": "Powerful tools to transform your customer experience",
+        "editor": {
+          "title": "Drag & drop editor",
+          "description": "Create intuitive interfaces without code using our advanced visual editor.",
+          "feature1": "Intuitive drag-and-drop interface",
+          "feature2": "Ready-to-use component library"
+        },
+        "architecture": {
+          "title": "Multi-tenant architecture",
+          "description": "Easily manage multiple franchisees with a scalable and secure architecture.",
+          "feature1": "Complete data isolation",
+          "feature2": "Granular permissions"
+        },
+        "analytics": {
+          "title": "Real-time analytics",
+          "description": "Track performance and optimize your sales with accurate data.",
+          "feature1": "Custom dashboards",
+          "feature2": "Smart alerts"
+        },
+        "pwa": {
+          "title": "PWA technology",
+          "description": "Fast and reliable interface that works even offline.",
+          "feature1": "Native performance",
+          "feature2": "Offline mode"
+        },
+        "security": {
+          "title": "Security & compliance",
+          "description": "Advanced data protection and guaranteed GDPR compliance.",
+          "feature1": "End-to-end encryption",
+          "feature2": "GDPR/PCI compliance"
+        },
+        "integrations": {
+          "title": "API integrations",
+          "description": "Easily connect your existing systems with our robust APIs.",
+          "feature1": "Complete REST API",
+          "feature2": "Real-time webhooks"
+        }
+      },
+      "cta": {
+        "title": "Ready to discover all our features?",
+        "subtitle": "Test KioskCraft free for 30 days and see the difference.",
+        "start_trial": "30-day free trial",
+        "schedule_demo": "Schedule a demo"
+      }
+    },
+    "pricing": {
+      "hero": {
+        "title": "Transparent pricing for everyone",
+        "subtitle": "Choose the plan that fits your needs. 30-day free trial on all plans."
+      },
+      "billing": {
+        "monthly": "Monthly",
+        "yearly": "yearly"
+      },
+      "plans": {
+        "freemium": {
+          "name": "Free",
+          "price": "$0",
+          "period": "/month",
+          "description": "Perfect for testing KioskCraft",
+          "feature1": "1 franchisee",
+          "feature2": "2 kiosks maximum",
+          "feature3": "Basic templates",
+          "feature4": "Community support",
+          "cta": "Start for free"
+        },
+        "pro": {
+          "name": "Pro",
+          "price": "$50",
+          "period": "/month",
+          "description": "Ideal for growing franchisors",
+          "badge": "Popular",
+          "feature1": "10 franchisees",
+          "feature2": "50 kiosks",
+          "feature3": "Advanced templates",
+          "feature4": "Detailed analytics",
+          "feature5": "Priority support",
+          "cta": "30-day free trial"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "price": "$200",
+          "period": "/month",
+          "description": "For large restaurant chains",
+          "feature1": "Unlimited franchisees",
+          "feature2": "Unlimited kiosks",
+          "feature3": "Complete API access",
+          "feature4": "Dedicated 24/7 support",
+          "feature5": "On-site training",
+          "cta": "Contact sales"
+        }
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "subtitle": "Everything you need to know about our pricing",
+        "q1": {
+          "question": "Can I change plans at any time?",
+          "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately."
+        },
+        "q2": {
+          "question": "Are there any setup fees?",
+          "answer": "No, there are no setup fees. We handle everything for free."
+        },
+        "q3": {
+          "question": "What happens if I exceed my limits?",
+          "answer": "We'll contact you to propose an upgrade. No service interruption."
+        },
+        "q4": {
+          "question": "Do you offer volume discounts?",
+          "answer": "Yes, we offer preferential rates for businesses with more than 100 kiosks. Contact us."
+        }
+      },
+      "cta": {
+        "title": "Ready to transform your restaurant?",
+        "subtitle": "Start your free trial today, no credit card required.",
+        "start_trial": "30-day free trial",
+        "contact_sales": "Contact sales"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contact our team",
+        "subtitle": "We're here to answer all your questions and support you in your project."
+      },
+      "form": {
+        "title": "Send us a message",
+        "name": "Full name",
+        "name_placeholder": "Your name",
+        "email": "Email address",
+        "email_placeholder": "your@email.com",
+        "company": "Company",
+        "company_placeholder": "Your company name",
+        "subject": "Subject",
+        "subjects": {
+          "general": "General question",
+          "sales": "Sales and pricing",
+          "support": "Technical support",
+          "partnership": "Partnership",
+          "press": "Press and media"
+        },
+        "message": "Message",
+        "message_placeholder": "Describe your project or question...",
+        "submit": "Send message"
+      },
+      "info": {
+        "title": "Contact information",
+        "address": {
+          "title": "Address",
+          "line1": "123 Tech Street",
+          "line2": "75001 Paris",
+          "line3": "France"
+        },
+        "phone": {
+          "title": "Phone",
+          "number": "+33 1 23 45 67 89",
+          "hours": "Mon-Fri 9am-6pm"
+        },
+        "email": {
+          "title": "Email",
+          "general": "contact@kioskcraft.com",
+          "support": "support@kioskcraft.com"
+        },
+        "hours": {
+          "title": "Support hours",
+          "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+          "weekend": "Saturday - Sunday: 10:00 AM - 4:00 PM"
+        }
+      },
+      "social": {
+        "title": "Follow us"
+      },
+      "cta": {
+        "title": "Ready for a demonstration?",
+        "subtitle": "Schedule a call with our team to see KioskCraft in action.",
+        "schedule_demo": "Schedule a demo"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "About KioskCraft",
+        "subtitle": "We're transforming the restaurant industry with innovative solutions for ordering kiosks."
+      },
+      "mission": {
+        "title": "Our mission",
+        "description": "KioskCraft was created with a simple vision: enable restaurant franchisors to perfectly control their brand identity across all their kiosks, while offering the necessary flexibility to their franchisees.",
+        "value1": "Technological innovation serving customer experience",
+        "value2": "Custom solutions for every restaurant chain",
+        "value3": "Dedicated support and personalized guidance"
+      },
+      "story": {
+        "title": "Our story",
+        "subtitle": "How we developed the reference SaaS solution for restaurant kiosks",
+        "step1": {
+          "title": "2022 - Problem identified",
+          "description": "We found that franchisors struggled to maintain brand consistency across their ordering kiosks."
+        },
+        "step2": {
+          "title": "2023 - Solution development",
+          "description": "Creation of our multi-tenant platform with an intuitive drag & drop editor and advanced analytics tools."
+        },
+        "step3": {
+          "title": "2024 - First customers",
+          "description": "Successful launch with our first franchisor partners and an average 35% increase in their sales."
+        },
+        "step4": {
+          "title": "Today - Market leadership",
+          "description": "Over 500 restaurants trust us and we continue to innovate to meet market needs."
+        }
+      },
+      "team": {
+        "title": "Our team",
+        "subtitle": "Passionate experts revolutionizing the restaurant industry",
+        "member1": {
+          "name": "Marie Dubois",
+          "role": "CEO & Co-founder",
+          "bio": "15 years of experience in tech and restaurants. Former VP at McDonald's Digital."
+        },
+        "member2": {
+          "name": "Pierre Martin",
+          "role": "CTO & Co-founder",
+          "bio": "Software architecture expert with 12 years of experience at Google and Uber."
+        },
+        "member3": {
+          "name": "Sophie Leroy",
+          "role": "VP Product",
+          "bio": "UX/UI specialist with a passion for innovation in the restaurant industry."
+        }
+      },
+      "values": {
+        "title": "Our values",
+        "subtitle": "The principles that guide our daily work",
+        "innovation": {
+          "title": "Innovation",
+          "description": "We constantly push the boundaries of technology."
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "We work hand in hand with our clients."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "Technical excellence and flawless user experience."
+        },
+        "passion": {
+          "title": "Passion",
+          "description": "We love what we do and it shows."
+        }
+      },
+      "cta": {
+        "title": "Join the KioskCraft adventure",
+        "subtitle": "We're hiring passionate talents to grow with us.",
+        "join_us": "Join the team",
+        "contact_us": "Contact us"
+      }
+    },
+    "partners": {
+      "hero": {
+        "title": "Our partner ecosystem",
+        "subtitle": "We collaborate with the best to offer you a complete and integrated solution."
+      },
+      "ecosystem": {
+        "title": "Partner integrations",
+        "subtitle": "KioskCraft integrates seamlessly with your existing tools"
+      },
+      "types": {
+        "payment": {
+          "title": "Payments",
+          "description": "Integration with leading payment solutions for a smooth experience."
+        },
+        "pos": {
+          "title": "Point of sale systems",
+          "description": "Automatic synchronization with your POS for unified management."
+        },
+        "hardware": {
+          "title": "Hardware",
+          "description": "Compatibility with leading touchscreen and kiosk brands."
+        }
+      },
+      "program": {
+        "title": "Partner program",
+        "subtitle": "Join our partner network and grow your business"
+      },
+      "benefits": {
+        "network": {
+          "title": "Expert network",
+          "description": "Access our network of technical and commercial experts."
+        },
+        "revenue": {
+          "title": "Revenue sharing",
+          "description": "Benefit from attractive commissions on every sale."
+        },
+        "support": {
+          "title": "Dedicated support",
+          "description": "Training and technical support for your teams."
+        }
+      },
+      "cta": {
+        "title": "Become a KioskCraft partner",
+        "subtitle": "Join our ecosystem and grow your business with us.",
+        "apply": "Apply now"
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use and protect your personal data.",
+      "last_updated": "Last updated: January 15, 2024",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "content": "At KioskCraft, we are committed to protecting your privacy and personal data. This policy explains how we collect, use and protect your information in accordance with GDPR."
+        },
+        "data_collection": {
+          "title": "Data we collect",
+          "intro": "We collect the following types of data:",
+          "item1": "Identification information (name, email, phone)",
+          "item2": "Platform usage data",
+          "item3": "Technical data (IP address, browser)",
+          "item4": "Cookies and similar technologies"
+        },
+        "data_usage": {
+          "title": "Data usage",
+          "intro": "We use your data to:",
+          "item1": "Provide and improve our services",
+          "item2": "Communicate with you",
+          "item3": "Analyze platform usage",
+          "item4": "Meet our legal obligations"
+        },
+        "data_sharing": {
+          "title": "Data sharing",
+          "content": "We never sell your personal data. We may share it only with our trusted partners to provide our services, and always in compliance with this policy."
+        },
+        "security": {
+          "title": "Security",
+          "content": "We use appropriate security measures to protect your data, including encryption, two-factor authentication and regular audits."
+        },
+        "rights": {
+          "title": "Your rights",
+          "intro": "In accordance with GDPR, you have the right to:",
+          "item1": "Access your personal data",
+          "item2": "Rectify inaccurate data",
+          "item3": "Delete your data (right to be forgotten)",
+          "item4": "Object to the processing of your data"
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For any questions about this policy, contact our Data Protection Officer at privacy@kioskcraft.com"
+        }
+      }
+    },
+    "legal": {
+      "title": "Legal Notice",
+      "subtitle": "Mandatory legal information about KioskCraft.",
+      "last_updated": "Last updated: January 15, 2024",
+      "sections": {
+        "company": {
+          "title": "Company identification",
+          "name": "Company name: KioskCraft SAS",
+          "form": "Legal form: Simplified Joint Stock Company",
+          "address": "Address: 123 Tech Street, 75001 Paris, France",
+          "registration": "Trade register: Paris B 123 456 789",
+          "vat": "VAT number: FR 12 123456789"
+        },
+        "director": {
+          "title": "Publication director",
+          "content": "Marie Dubois, President of KioskCraft SAS"
+        },
+        "hosting": {
+          "title": "Hosting",
+          "provider": "Host: OVH SAS",
+          "address": "Address: 2 rue Kellermann, 59100 Roubaix, France",
+          "website": "Website: www.ovh.com"
+        },
+        "intellectual_property": {
+          "title": "Intellectual property",
+          "content": "All content on this site (texts, images, logos) is protected by copyright and belongs to KioskCraft or its partners. Any reproduction without authorization is prohibited."
+        },
+        "liability": {
+          "title": "Liability",
+          "content": "KioskCraft strives to provide accurate information but cannot guarantee the absence of errors. Use of information is at your own risk."
+        },
+        "applicable_law": {
+          "title": "Applicable law",
+          "content": "These legal notices are governed by French law. Any dispute will be brought before the competent courts of Paris."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For any questions about these legal notices, contact us at legal@kioskcraft.com"
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "subtitle": "The conditions that govern the use of the KioskCraft platform.",
+      "last_updated": "Last updated: January 15, 2024",
+      "sections": {
+        "acceptance": {
+          "title": "Acceptance of terms",
+          "content": "By using the KioskCraft platform, you fully accept these general terms of use. If you disagree, please do not use our services."
+        },
+        "service_description": {
+          "title": "Service description",
+          "content": "KioskCraft is a SaaS platform that allows franchisors to create and manage customized interfaces for their restaurant ordering kiosks."
+        },
+        "user_obligations": {
+          "title": "User obligations",
+          "intro": "By using our services, you agree to:",
+          "item1": "Provide accurate and up-to-date information",
+          "item2": "Respect applicable laws and regulations",
+          "item3": "Not use the service for illegal purposes",
+          "item4": "Maintain the confidentiality of your credentials"
+        },
+        "payment": {
+          "title": "Payment terms",
+          "content": "Prices are shown excluding taxes. Payment is made by automatic debit according to the chosen frequency. Any payment delay may result in service suspension."
+        },
+        "intellectual_property": {
+          "title": "Intellectual property",
+          "content": "KioskCraft retains all intellectual property rights to the platform. You retain your rights to content you create with our tools."
+        },
+        "liability": {
+          "title": "Limitation of liability",
+          "content": "KioskCraft cannot be held responsible for indirect or consequential damages resulting from platform use. Our liability is limited to the amount paid for our services."
+        },
+        "termination": {
+          "title": "Termination",
+          "content": "Either party may terminate the service at any time with 30 days notice. KioskCraft may terminate immediately in case of terms violation."
+        },
+        "modifications": {
+          "title": "Modifications",
+          "content": "KioskCraft reserves the right to modify these terms. Users will be informed of changes and must accept them to continue using the service."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For any questions about these terms, contact us at legal@kioskcraft.com"
+        }
+      }
     }
   },
   "seo": {

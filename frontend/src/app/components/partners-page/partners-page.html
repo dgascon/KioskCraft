@@ -1,0 +1,281 @@
+<app-seo-head></app-seo-head>
+<div class="fixed top-4 left-4 z-50 flex gap-2">
+  <button 
+    (click)="navigateToHome()"
+    class="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+    title="Retour à l'accueil"
+  >
+    <svg class="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+    </svg>
+  </button>
+  <app-theme-toggle></app-theme-toggle>
+  <app-language-toggle></app-language-toggle>
+</div>
+
+<main class="min-h-screen bg-white dark:bg-gray-900 pt-20">
+  <!-- Hero Section -->
+  <section class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-purple-600 via-pink-600 to-red-600 dark:bg-gradient-to-br dark:from-slate-900 dark:via-gray-900 dark:to-black">
+    <!-- Network/Partnership Animated Background -->
+    <div class="absolute inset-0 opacity-20 dark:opacity-30">
+      <!-- Network Nodes -->
+      <div class="absolute top-20 left-16 animate-pulse-soft">
+        <div class="w-4 h-4 bg-white rounded-full opacity-80"></div>
+        <div class="absolute top-8 left-12 w-3 h-3 bg-white rounded-full opacity-60"></div>
+        <div class="absolute -top-4 left-16 w-5 h-5 bg-white rounded-full opacity-70"></div>
+        <svg class="absolute top-0 left-0 w-24 h-24 text-white opacity-40">
+          <line x1="8" y1="8" x2="20" y2="16" stroke="currentColor" stroke-width="1"/>
+          <line x1="8" y1="8" x2="24" y2="4" stroke="currentColor" stroke-width="1"/>
+          <line x1="20" y1="16" x2="24" y2="4" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </div>
+      
+      <!-- Partnership Handshake -->
+      <div class="absolute top-40 right-20 text-white opacity-35 animate-float animate-delay-200">
+        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      
+      <!-- Connection Web -->
+      <svg class="absolute bottom-40 left-1/4 w-32 h-24 text-white opacity-30" viewBox="0 0 120 80">
+        <circle cx="20" cy="20" r="2" fill="currentColor"/>
+        <circle cx="60" cy="15" r="2" fill="currentColor"/>
+        <circle cx="100" cy="25" r="2" fill="currentColor"/>
+        <circle cx="30" cy="60" r="2" fill="currentColor"/>
+        <circle cx="80" cy="55" r="2" fill="currentColor"/>
+        <line x1="20" y1="20" x2="60" y2="15" stroke="currentColor" stroke-width="0.5" class="animate-pulse-soft"/>
+        <line x1="60" y1="15" x2="100" y2="25" stroke="currentColor" stroke-width="0.5" class="animate-pulse-soft animate-delay-200"/>
+        <line x1="20" y1="20" x2="30" y2="60" stroke="currentColor" stroke-width="0.5" class="animate-pulse-soft animate-delay-400"/>
+        <line x1="30" y1="60" x2="80" y2="55" stroke="currentColor" stroke-width="0.5" class="animate-pulse-soft animate-delay-600"/>
+        <line x1="80" y1="55" x2="100" y2="25" stroke="currentColor" stroke-width="0.5" class="animate-pulse-soft"/>
+      </svg>
+      
+      <!-- Ecosystem Rings -->
+      <div class="absolute top-1/3 right-1/4 animate-rotate-glow">
+        <div class="w-12 h-12 border-2 border-white rounded-full opacity-30"></div>
+        <div class="absolute top-2 left-2 w-8 h-8 border border-white rounded-full opacity-20"></div>
+        <div class="absolute top-4 left-4 w-4 h-4 border border-white rounded-full opacity-40"></div>
+      </div>
+    </div>
+    
+    <!-- Dark mode partnership elements -->
+    <div class="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500">
+      <div class="absolute top-20 right-16 w-20 h-20 border border-purple-400 rounded-full animate-pulse-soft opacity-20"></div>
+      <div class="absolute bottom-40 left-32 w-16 h-16 border border-pink-400 transform rotate-45 animate-float opacity-15"></div>
+      <div class="absolute top-1/2 left-10 w-12 h-12 border border-red-400 animate-rotate-glow opacity-10"></div>
+      
+      <!-- Partnership grid -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" viewBox="0 0 100 100">
+          <defs>
+            <pattern id="partners-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgb(168, 85, 247)" stroke-width="0.3"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#partners-grid)"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up">
+          {{ 'pages.partners.hero.title' | translate }}
+        </h1>
+        <p class="text-xl text-gray-100 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
+          {{ 'pages.partners.hero.subtitle' | translate }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Grid -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.partners.ecosystem.title' | translate }}
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          {{ 'pages.partners.ecosystem.subtitle' | translate }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Payment Partners -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
+          <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            {{ 'pages.partners.types.payment.title' | translate }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            {{ 'pages.partners.types.payment.description' | translate }}
+          </p>
+          <div class="space-y-2">
+            <div class="text-sm text-gray-500 dark:text-gray-400">Stripe, PayPal, Square</div>
+          </div>
+        </div>
+
+        <!-- POS Partners -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            {{ 'pages.partners.types.pos.title' | translate }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            {{ 'pages.partners.types.pos.description' | translate }}
+          </p>
+          <div class="space-y-2">
+            <div class="text-sm text-gray-500 dark:text-gray-400">Toast, Lightspeed, Revel</div>
+          </div>
+        </div>
+
+        <!-- Hardware Partners -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
+          <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            {{ 'pages.partners.types.hardware.title' | translate }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            {{ 'pages.partners.types.hardware.description' | translate }}
+          </p>
+          <div class="space-y-2">
+            <div class="text-sm text-gray-500 dark:text-gray-400">Samsung, LG, Elo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programme de Recommandation -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Programme de Recommandation Franchisés
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+          Vous êtes franchisé et vous connaissez d'autres restaurants qui pourraient bénéficier de KioskCraft ? 
+          Recommandez-nous et percevez une commission !
+        </p>
+        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 max-w-4xl mx-auto">
+          <p class="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+            <strong>Pourquoi un franchisé peut-il toucher une commission ?</strong><br>
+            En tant que franchisé utilisant déjà KioskCraft, vous êtes notre meilleur ambassadeur. Vous connaissez concrètement 
+            les bénéfices de notre solution et pouvez témoigner de son efficacité auprès d'autres restaurateurs. 
+            Votre recommandation a une valeur commerciale réelle - c'est pourquoi nous vous récompensons pour chaque nouveau client que vous nous apportez.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+          <div class="w-16 h-16 bg-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            Recommandation Qualifiée
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Recommandez un restaurant de votre réseau qui pourrait bénéficier de KioskCraft. 
+            Votre connaissance du terrain facilite l'identification des prospects qualifiés.
+          </p>
+        </div>
+
+        <div class="text-center bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+          <div class="w-16 h-16 bg-green-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            Commission Attractive
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            <strong>500€ par nouveau client</strong> qui souscrit à un abonnement Pro ou Enterprise. 
+            Versée après 3 mois d'abonnement actif pour garantir la satisfaction.
+          </p>
+        </div>
+
+        <div class="text-center bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+          <div class="w-16 h-16 bg-purple-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            Support Dédié
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Accompagnement personnalisé pour présenter KioskCraft aux prospects. 
+            Outils marketing et formations pour maximiser vos chances de succès.
+          </p>
+        </div>
+      </div>
+
+      <!-- Conditions -->
+      <div class="mt-12 bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg">
+        <h4 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+          Comment ça fonctionne ?
+        </h4>
+        <div class="grid md:grid-cols-4 gap-6 text-center">
+          <div class="space-y-3">
+            <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto font-bold">1</div>
+            <h5 class="font-semibold text-gray-900 dark:text-white">Identifiez</h5>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Un restaurant qui pourrait bénéficier de bornes tactiles</p>
+          </div>
+          <div class="space-y-3">
+            <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto font-bold">2</div>
+            <h5 class="font-semibold text-gray-900 dark:text-white">Recommandez</h5>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Transmettez leurs coordonnées via notre formulaire partenaire</p>
+          </div>
+          <div class="space-y-3">
+            <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto font-bold">3</div>
+            <h5 class="font-semibold text-gray-900 dark:text-white">Conversion</h5>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Notre équipe prend le relais pour convertir le prospect</p>
+          </div>
+          <div class="space-y-3">
+            <div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto font-bold">€</div>
+            <h5 class="font-semibold text-gray-900 dark:text-white">Récompense</h5>
+            <p class="text-sm text-gray-600 dark:text-gray-300">500€ versés après 3 mois d'abonnement actif</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-blue-600 dark:bg-blue-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        {{ 'pages.partners.cta.title' | translate }}
+      </h2>
+      <p class="text-xl text-blue-100 mb-8">
+        {{ 'pages.partners.cta.subtitle' | translate }}
+      </p>
+      <button 
+        (click)="navigateToContact()"
+        class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+      >
+        {{ 'pages.partners.cta.apply' | translate }}
+      </button>
+    </div>
+  </section>
+</main>
+
+<app-footer-section></app-footer-section>

@@ -1,0 +1,98 @@
+<app-seo-head></app-seo-head>
+<div class="fixed top-4 left-4 z-50 flex gap-2">
+  <button 
+    (click)="navigateToHome()"
+    class="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+    title="Retour à l'accueil"
+  >
+    <svg class="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+    </svg>
+  </button>
+  <app-theme-toggle></app-theme-toggle>
+  <app-language-toggle></app-language-toggle>
+</div>
+
+<main class="min-h-screen bg-white dark:bg-gray-900 pt-20">
+  <!-- Hero Section -->
+  <section class="relative py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          {{ 'pages.legal.title' | translate }}
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          {{ 'pages.legal.subtitle' | translate }}
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+          {{ 'pages.legal.last_updated' | translate }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.legal.sections.company.title' | translate }}
+        </h2>
+        <div class="text-gray-600 dark:text-gray-300 mb-8 space-y-2">
+          <p>{{ 'pages.legal.sections.company.name' | translate }}</p>
+          <p>{{ 'pages.legal.sections.company.form' | translate }}</p>
+          <p>{{ 'pages.legal.sections.company.address' | translate }}</p>
+          <p>{{ 'pages.legal.sections.company.registration' | translate }}</p>
+          <p>{{ 'pages.legal.sections.company.vat' | translate }}</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.legal.sections.director.title' | translate }}
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">
+          {{ 'pages.legal.sections.director.content' | translate }}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.legal.sections.hosting.title' | translate }}
+        </h2>
+        <div class="text-gray-600 dark:text-gray-300 mb-8 space-y-2">
+          <p>{{ 'pages.legal.sections.hosting.provider' | translate }}</p>
+          <p>{{ 'pages.legal.sections.hosting.address' | translate }}</p>
+          <p>{{ 'pages.legal.sections.hosting.website' | translate }}</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.legal.sections.intellectual_property.title' | translate }}
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">
+          {{ 'pages.legal.sections.intellectual_property.content' | translate }}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.legal.sections.liability.title' | translate }}
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">
+          {{ 'pages.legal.sections.liability.content' | translate }}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.legal.sections.applicable_law.title' | translate }}
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">
+          {{ 'pages.legal.sections.applicable_law.content' | translate }}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.legal.sections.contact.title' | translate }}
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300">
+          {{ 'pages.legal.sections.contact.content' | translate }}
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer-section></app-footer-section>

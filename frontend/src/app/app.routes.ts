@@ -19,11 +19,11 @@ export const routes: Routes = [
       },
       {
         path: 'features',
-        loadComponent: () => import('./components/landing-page/landing-page').then(m => m.LandingPage)
+        loadComponent: () => import('./components/features-page/features-page').then(m => m.FeaturesPage)
       },
       {
         path: 'pricing',
-        loadComponent: () => import('./components/landing-page/landing-page').then(m => m.LandingPage)
+        loadComponent: () => import('./components/pricing-page/pricing-page').then(m => m.PricingPage)
       },
       {
         path: 'demo',
@@ -31,11 +31,27 @@ export const routes: Routes = [
       },
       {
         path: 'contact',
-        loadComponent: () => import('./components/landing-page/landing-page').then(m => m.LandingPage)
+        loadComponent: () => import('./components/contact-page/contact-page').then(m => m.ContactPage)
       },
       {
         path: 'about',
-        loadComponent: () => import('./components/landing-page/landing-page').then(m => m.LandingPage)
+        loadComponent: () => import('./components/about-page/about-page').then(m => m.AboutPage)
+      },
+      {
+        path: 'partners',
+        loadComponent: () => import('./components/partners-page/partners-page').then(m => m.PartnersPage)
+      },
+      {
+        path: 'privacy',
+        loadComponent: () => import('./components/privacy-page/privacy-page').then(m => m.PrivacyPage)
+      },
+      {
+        path: 'legal',
+        loadComponent: () => import('./components/legal-page/legal-page').then(m => m.LegalPage)
+      },
+      {
+        path: 'terms',
+        loadComponent: () => import('./components/terms-page/terms-page').then(m => m.TermsPage)
       }
     ]
   },

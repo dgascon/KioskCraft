@@ -1,0 +1,383 @@
+<app-seo-head></app-seo-head>
+<div class="fixed top-4 left-4 z-50 flex gap-2">
+  <button 
+    (click)="navigateToHome()"
+    class="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+    title="Retour à l'accueil"
+  >
+    <svg class="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+    </svg>
+  </button>
+  <app-theme-toggle></app-theme-toggle>
+  <app-language-toggle></app-language-toggle>
+</div>
+
+<main class="min-h-screen bg-white dark:bg-gray-900 pt-20">
+  <!-- Hero Section -->
+  <section class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 dark:bg-gradient-to-br dark:from-slate-900 dark:via-gray-900 dark:to-black">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 opacity-20 dark:opacity-30">
+      <!-- Business Chart Pattern -->
+      <svg class="absolute top-20 left-10 w-32 h-24 text-white animate-float" viewBox="0 0 100 80">
+        <rect x="10" y="60" width="12" height="20" fill="currentColor" opacity="0.6" class="animate-pulse-soft"/>
+        <rect x="30" y="40" width="12" height="40" fill="currentColor" opacity="0.7" class="animate-pulse-soft animate-delay-200"/>
+        <rect x="50" y="25" width="12" height="55" fill="currentColor" opacity="0.8" class="animate-pulse-soft animate-delay-400"/>
+        <rect x="70" y="35" width="12" height="45" fill="currentColor" opacity="0.6" class="animate-pulse-soft animate-delay-600"/>
+      </svg>
+      
+      <!-- Floating Business Icons -->
+      <div class="absolute top-40 right-20 animate-float animate-delay-300">
+        <svg class="w-16 h-16 text-white opacity-40" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+        </svg>
+      </div>
+      
+      <!-- Network Nodes -->
+      <div class="absolute bottom-32 left-1/4 animate-pulse-soft">
+        <div class="w-3 h-3 bg-white rounded-full opacity-60"></div>
+        <div class="absolute top-6 left-8 w-2 h-2 bg-white rounded-full opacity-40"></div>
+        <div class="absolute -top-4 left-12 w-4 h-4 bg-white rounded-full opacity-50"></div>
+        <!-- Connection Lines -->
+        <svg class="absolute top-0 left-0 w-20 h-20 text-white opacity-30">
+          <line x1="6" y1="6" x2="38" y2="30" stroke="currentColor" stroke-width="1"/>
+          <line x1="6" y1="6" x2="54" y2="12" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </div>
+      
+      <!-- Geometric Shapes -->
+      <div class="absolute top-1/3 right-1/4 animate-rotate-glow">
+        <div class="w-8 h-8 border-2 border-white transform rotate-45 opacity-30"></div>
+      </div>
+      
+      <!-- Corporate Building -->
+      <svg class="absolute bottom-20 right-16 w-20 h-28 text-white opacity-25 animate-float animate-delay-500" viewBox="0 0 80 120">
+        <rect x="10" y="40" width="60" height="80" fill="currentColor" opacity="0.4"/>
+        <rect x="20" y="50" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="35" y="50" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="52" y="50" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="20" y="65" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="35" y="65" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="52" y="65" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="20" y="80" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="35" y="80" width="8" height="8" fill="currentColor" opacity="0.6"/>
+        <rect x="52" y="80" width="8" height="8" fill="currentColor" opacity="0.6"/>
+      </svg>
+    </div>
+    
+    <!-- Dark mode tech elements -->
+    <div class="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500">
+      <div class="absolute top-20 left-20 w-24 h-24 border border-cyan-400 rounded-full animate-pulse-soft opacity-20"></div>
+      <div class="absolute bottom-40 right-32 w-16 h-16 border border-purple-400 transform rotate-45 animate-float opacity-15"></div>
+      <div class="absolute top-1/2 right-10 w-12 h-12 border border-pink-400 animate-rotate-glow opacity-10"></div>
+      
+      <!-- Cyber grid pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" viewBox="0 0 100 100">
+          <defs>
+            <pattern id="about-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgb(59, 130, 246)" stroke-width="0.3"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#about-grid)"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up">
+          {{ 'pages.about.hero.title' | translate }}
+        </h1>
+        <p class="text-xl text-gray-100 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
+          {{ 'pages.about.hero.subtitle' | translate }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-fade-in-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in-up">
+            {{ 'pages.about.mission.title' | translate }}
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 animate-fade-in-up animate-delay-200">
+            {{ 'pages.about.mission.description' | translate }}
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center card-interactive p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 animate-fade-in-scale animate-delay-300">
+              <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-4 animate-pulse-soft">
+                <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-gray-700 dark:text-gray-300 font-medium">
+                {{ 'pages.about.mission.value1' | translate }}
+              </span>
+            </div>
+            <div class="flex items-center card-interactive p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 animate-fade-in-scale animate-delay-400">
+              <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-4 animate-pulse-soft">
+                <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-gray-700 dark:text-gray-300 font-medium">
+                {{ 'pages.about.mission.value2' | translate }}
+              </span>
+            </div>
+            <div class="flex items-center card-interactive p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 animate-fade-in-scale animate-delay-500">
+              <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-4 animate-pulse-soft">
+                <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-gray-700 dark:text-gray-300 font-medium">
+                {{ 'pages.about.mission.value3' | translate }}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-w-4 aspect-h-3 bg-gray-200 dark:bg-gray-700 rounded-2xl">
+            <div class="flex items-center justify-center text-gray-500 dark:text-gray-400">
+              <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.about.story.title' | translate }}
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          {{ 'pages.about.story.subtitle' | translate }}
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <div class="relative">
+          <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+          <div class="relative flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+              1
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                {{ 'pages.about.story.step1.title' | translate }}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.about.story.step1.description' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+          <div class="relative flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+              2
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                {{ 'pages.about.story.step2.title' | translate }}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.about.story.step2.description' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+          <div class="relative flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+              3
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                {{ 'pages.about.story.step3.title' | translate }}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.about.story.step3.description' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="relative flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+              ✓
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                {{ 'pages.about.story.step4.title' | translate }}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                {{ 'pages.about.story.step4.description' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ 'pages.about.team.title' | translate }}
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          {{ 'pages.about.team.subtitle' | translate }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div class="text-center">
+          <div class="w-32 h-32 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+            {{ 'pages.about.team.member1.name' | translate }}
+          </h3>
+          <p class="text-blue-600 dark:text-blue-400 mb-2">
+            {{ 'pages.about.team.member1.role' | translate }}
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            {{ 'pages.about.team.member1.bio' | translate }}
+          </p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="text-center">
+          <div class="w-32 h-32 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+            {{ 'pages.about.team.member2.name' | translate }}
+          </h3>
+          <p class="text-blue-600 dark:text-blue-400 mb-2">
+            {{ 'pages.about.team.member2.role' | translate }}
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            {{ 'pages.about.team.member2.bio' | translate }}
+          </p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="text-center">
+          <div class="w-32 h-32 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+            {{ 'pages.about.team.member3.name' | translate }}
+          </h3>
+          <p class="text-blue-600 dark:text-blue-400 mb-2">
+            {{ 'pages.about.team.member3.role' | translate }}
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            {{ 'pages.about.team.member3.bio' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-20 bg-blue-600 dark:bg-blue-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          {{ 'pages.about.values.title' | translate }}
+        </h2>
+        <p class="text-xl text-blue-100">
+          {{ 'pages.about.values.subtitle' | translate }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">
+            {{ 'pages.about.values.innovation.title' | translate }}
+          </h3>
+          <p class="text-blue-100 text-sm">
+            {{ 'pages.about.values.innovation.description' | translate }}
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">
+            {{ 'pages.about.values.collaboration.title' | translate }}
+          </h3>
+          <p class="text-blue-100 text-sm">
+            {{ 'pages.about.values.collaboration.description' | translate }}
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">
+            {{ 'pages.about.values.quality.title' | translate }}
+          </h3>
+          <p class="text-blue-100 text-sm">
+            {{ 'pages.about.values.quality.description' | translate }}
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">
+            {{ 'pages.about.values.passion.title' | translate }}
+          </h3>
+          <p class="text-blue-100 text-sm">
+            {{ 'pages.about.values.passion.description' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<app-footer-section></app-footer-section>

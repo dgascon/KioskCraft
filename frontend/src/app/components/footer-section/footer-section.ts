@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { LocaleService } from '../../services/locale.service';
 
 interface FooterLink {
   text: string;
-  href: string;
+  route: string;
 }
 
 interface FooterSection {
@@ -17,32 +19,29 @@ interface FooterSection {
   templateUrl: './footer-section.html'
 })
 export class FooterSectionComponent {
+  private router = inject(Router);
+  private localeService = inject(LocaleService);
   footerSections: FooterSection[] = [
     {
       title: 'footer.sections.product.title',
       links: [
-        { text: 'footer.sections.product.features', href: '#' },
-        { text: 'footer.sections.product.pricing', href: '#' },
-        { text: 'footer.sections.product.demo', href: '#' },
-        { text: 'footer.sections.product.documentation', href: '#' }
+        { text: 'footer.sections.product.features', route: 'features' },
+        { text: 'footer.sections.product.pricing', route: 'pricing' },
+        { text: 'footer.sections.product.demo', route: 'demo' },
       ]
     },
     {
       title: 'footer.sections.support.title',
       links: [
-        { text: 'footer.sections.support.help_center', href: '#' },
-        { text: 'footer.sections.support.contact', href: '#' },
-        { text: 'footer.sections.support.training', href: '#' },
-        { text: 'footer.sections.support.api', href: '#' }
+        { text: 'footer.sections.support.help_center', route: 'contact' },
+        { text: 'footer.sections.support.contact', route: 'contact' },
       ]
     },
     {
       title: 'footer.sections.company.title',
       links: [
-        { text: 'footer.sections.company.about', href: '#' },
-        { text: 'footer.sections.company.careers', href: '#' },
-        { text: 'footer.sections.company.press', href: '#' },
-        { text: 'footer.sections.company.partners', href: '#' }
+        { text: 'footer.sections.company.about', route: 'about' },
+        { text: 'footer.sections.company.partners', route: 'partners' }
       ]
     }
   ];
@@ -61,8 +60,13 @@ export class FooterSectionComponent {
   ];
 
   legalLinks = [
-    { text: 'footer.legal.privacy', href: '#' },
-    { text: 'footer.legal.terms', href: '#' },
-    { text: 'footer.legal.conditions', href: '#' }
+    { text: 'footer.legal.privacy', route: 'privacy' },
+    { text: 'footer.legal.terms', route: 'legal' },
+    { text: 'footer.legal.conditions', route: 'terms' }
   ];
+
+  navigateTo(route: string) {
+    const currentLocale = this.localeService.currentLocale();
+    this.router.navigate([`/${currentLocale}/${route}`]);
+  }
 }
